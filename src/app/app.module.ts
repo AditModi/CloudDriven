@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {ClipboardModule} from 'ngx-clipboard'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormUploadComponent } from './form-upload/form-upload.component';
@@ -17,7 +17,8 @@ import { DetailsUploadComponent } from './details-upload/details-upload.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ClipboardModule
   ],
   providers: [FileUploadService],
   bootstrap: [AppComponent]

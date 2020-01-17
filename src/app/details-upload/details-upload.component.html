@@ -1,4 +1,5 @@
 <div class="jumbotron">
     <a href="{{fileUpload.url}}">{{fileUpload.name}}</a><br/><br/>
+    <button (click)="copyText(fileUpload.url)" style="margin-right: 5px;"  class="btn btn-success">Share</button>
     <button (click)='delete(fileUpload)' class="btn btn-danger">Delete</button>
 </div>	
