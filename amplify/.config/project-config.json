@@ -1,0 +1,17 @@
+{
+    "projectName": "SDP1",
+    "version": "3.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "angular",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist/sdpapp",
+            "BuildCommand": "npm.cmd run-script build",
+            "StartCommand": "ng serve"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}
