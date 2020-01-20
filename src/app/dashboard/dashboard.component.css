@@ -1,0 +1,22 @@
+.all {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background: #f3f3f3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.nav-brand p {
+    padding: 5px;
+    margin-bottom: 0;
+}
