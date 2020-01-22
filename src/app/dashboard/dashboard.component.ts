@@ -9,18 +9,34 @@ import { Auth } from "aws-amplify";
 })
 export class DashboardComponent implements OnInit {
 
-  user = "bhaumik";
-
+  
+  uname:string="";
   constructor(private router: Router) {}
-
-  ngOnInit() {}
+  user:any;
+  ngOnInit() {
+    // if( Auth.currentSession()==null ){
+    //   console.log("not logged in")
+    //   this.router.navigate(['/login'])
+    // }
+    // else{
+      //this.user = Auth.currentUserInfo()
+      //this.user.then(data=>this.uname=data.username)
+   // }
+    this.uname=localStorage.getItem('user')
+    if(this.uname==null){
+      alert("You are not logged in")
+      this.router.navigate(['login'])
+    }
+    
+  }
 
   onLogOut() {
     Auth.signOut()
       .then(data => {
         console.log(data);
         console.log("You are successfully logged out");
-        this.router.navigate(["/login"]);
+        localStorage.removeItem('user')
+        this.router.navigate([""]);
       })
       .catch(err => console.log(err));
   }

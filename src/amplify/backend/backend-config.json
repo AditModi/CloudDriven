@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"srcdb21b6c5": {
+		"sdp125a10f1f": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],

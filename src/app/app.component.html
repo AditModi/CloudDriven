@@ -3,12 +3,13 @@
     <h1>{{title}}</h1>
     <h3>{{description}}</h3>
   </div>
- 
-  <app-form-upload></app-form-upload>
-
-<app-signup></app-signup>
- <br/>
-  <br/>
-  
-  <app-list-upload></app-list-upload>
+  <ul>
+  <li>
+    <a routerLink="login">Login</a>
+  </li>
+  <li>
+    <a routerLink="dashboard">Dashboard</a>
+  </li>
+  </ul>
+  <router-outlet></router-outlet>
 </div>

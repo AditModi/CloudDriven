@@ -16,6 +16,10 @@ export class SignupComponent implements OnInit {
   constructor( private route: Router) { }
 
   ngOnInit() {
+    if(localStorage.getItem('user')!=null){
+      alert("You are already logged in!")
+      this.route.navigate(['dashboard'])
+    }
   }
 
   onSignUp() {
@@ -79,6 +83,7 @@ export class SignupComponent implements OnInit {
 
     Auth.signIn(authInfo).then(user => {
       console.log(user);
+      localStorage.setItem('user',authInfo.username)
       this.route.navigate(['/dashboard'])
     })
       .catch(err => console.log(err));

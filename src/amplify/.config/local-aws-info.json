@@ -1,0 +1,7 @@
+{
+    "env": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "default"
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-sdp1-env-164528-authRole",
+            "UnauthRoleArn": "arn:aws:iam::780655064925:role/amplify-sdp1-env-164528-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::780655064925:role/amplify-sdp1-env-164528-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-sdp1-env-164528-deployment",
+            "UnauthRoleName": "amplify-sdp1-env-164528-unauthRole",
+            "StackName": "amplify-sdp1-env-164528",
+            "StackId": "arn:aws:cloudformation:us-east-1:780655064925:stack/amplify-sdp1-env-164528/2e37f3e0-3b76-11ea-9941-0a2de5ab949d",
+            "AmplifyAppId": "d1aytc76fcjxqy"
+        }
+    },
+    "auth": {
+        "sdp125a10f1f": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "customAuth": false,
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-sdp1-env-164528-deployment/amplify-cfn-templates/auth/sdp125a10f1f-cloudformation-template.yml",
+                "logicalId": "authsdp125a10f1f"
+            },
+            "lastPushTimeStamp": "2020-01-21T14:40:32.789Z",
+            "output": {
+                "AppClientSecret": "153im01efsds8059jj9na7i7qog7u7fa0fb9n55qek120chhuvm9",
+                "UserPoolId": "us-east-1_OiUgsgxpq",
+                "AppClientIDWeb": "5ucvokblofc7ldnm2r2kvhl0d4",
+                "AppClientID": "54j2m72isantcj248v8krs8t29",
+                "IdentityPoolId": "us-east-1:8497a086-12fd-4c0b-bb3d-d1cd47abc0d8",
+                "IdentityPoolName": "sdp125a10f1f_identitypool_25a10f1f__env",
+                "UserPoolName": "sdp125a10f1f_userpool_25a10f1f"
+            },
+            "lastPushDirHash": "M/vWRxFt9NpPMro4K/tUswhFRh4="
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-sdp1-env-164528-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2020-01-21T14:40:32.790Z",
+            "output": {
+                "S3BucketSecureURL": "https://1-20200120164944-hostingbucket-env.s3.amazonaws.com",
+                "WebsiteURL": "http://1-20200120164944-hostingbucket-env.s3-website-us-east-1.amazonaws.com",
+                "Region": "us-east-1",
+                "HostingBucketName": "1-20200120164944-hostingbucket-env"
+            },
+            "lastPushDirHash": "oMj/+j6XMhEoAABGHa6m7CG8iic="
+        }
+    }
+}

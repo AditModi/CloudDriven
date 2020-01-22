@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadService } from '../file-upload.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-upload',
@@ -10,9 +11,13 @@ export class FormUploadComponent implements OnInit {
 
   selectedFiles: FileList;
  
-  constructor(private uploadService: FileUploadService) { }
+  constructor(private uploadService: FileUploadService,private router:Router) { }
  
   ngOnInit() {
+    if(localStorage.getItem('user')==null){
+      alert("Log in to upload files")
+      this.router.navigate(['login'])
+    }
   }
  
   upload() {

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  ttitle = 'AWS S3 File Upload Feature';
-  description = 'Angular8-AmazonS3 File Upload Demo ';
+  title = 'Personal digital storage';
+  description = 'powered by Amazon S3';
 }
