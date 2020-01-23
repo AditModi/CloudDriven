@@ -10,16 +10,17 @@ import { FileUpload } from './file-upload';
 //})
 export class FileUploadService {
 
-  FOLDER = 'SdpProject/';
+  //FOLDER = 'SdpProject/';
+  
   BUCKET = 'mysdpproject';
  
   constructor() { }
 
-  private getS3Bucket(): any {
+  getS3Bucket(): S3 {
     const bucket = new S3(
       {
-        accessKeyId: 'XXXX',
-        secretAccessKey: 'XXXX',
+        accessKeyId: 'AKIA3LQVK65O26X7MXHK',
+        secretAccessKey: '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',
         region: 'ap-south-1'
       }
     );
@@ -28,10 +29,10 @@ export class FileUploadService {
   }
  
   uploadfile(file) {
- 
+    var FOLDER= localStorage.getItem('user') + "/"
     const params = {
       Bucket: this.BUCKET,
-      Key: this.FOLDER + file.name,
+      Key: FOLDER + file.name,
       Body: file,
       ACL: 'public-read'
     };
@@ -49,10 +50,10 @@ export class FileUploadService {
 
   getFiles(): Observable<Array<FileUpload>> {
     const fileUploads = new Array<FileUpload>();
- 
+    var FOLDER= localStorage.getItem('user') + "/"
     const params = {
       Bucket: this.BUCKET,
-      Prefix: this.FOLDER
+      Prefix: FOLDER
     };
  
     this.getS3Bucket().listObjects(params, function (err, data) {

@@ -10,11 +10,13 @@ import { FileUploadService } from '../file-upload.service';
 export class DetailsUploadComponent implements OnInit {
   @Input() fileUpload: FileUpload;
   constructor(private uploadService: FileUploadService) { }
-
+   
   ngOnInit() {
+    
   }
   delete(file) {
     this.uploadService.deleteFile(file);
+    window.location.reload();
   }
 
   copyText(val: string){

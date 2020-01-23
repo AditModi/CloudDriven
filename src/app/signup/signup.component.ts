@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Auth } from 'aws-amplify';
 import { Router } from '@angular/router';
+import { FileUploadService } from '../file-upload.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +14,7 @@ export class SignupComponent implements OnInit {
   toVerifyEmail: boolean = false;
   userName: string;
 
-  constructor( private route: Router) { }
+  constructor( private route: Router,private uploadService:FileUploadService) { }
 
   ngOnInit() {
     if(localStorage.getItem('user')!=null){
@@ -70,6 +71,8 @@ export class SignupComponent implements OnInit {
         console.log(data)
         this.toVerifyEmail = false;
         this.signstatus = 'signin'
+        this.CreateDiectory()
+
       })
         .catch(err => console.log(err));
   }
@@ -90,5 +93,21 @@ export class SignupComponent implements OnInit {
 
   }
 
+  CreateDiectory() {
+    const params = {
+      Bucket: this.uploadService.BUCKET,
+      Key: this.userName,
+      ACL: 'public-read'
+    }
+
+    this.uploadService.getS3Bucket().putObject(params, function (err, data) {
+      if (err) {
+        console.log(err)
+      }
+      else {
+        console.log(data)
+      }
+    })
+  }
 
 }
