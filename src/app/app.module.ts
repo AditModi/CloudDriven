@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavigationComponent } from './navigation/navigation.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ClipboardModule
+    ClipboardModule,
+    FormsModule
   ],
   providers: [FileUploadService],
   bootstrap: [AppComponent]

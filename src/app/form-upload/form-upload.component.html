@@ -7,9 +7,9 @@
                 <input type="file" id="file" (change)="selectFile($event)" />
                 <label for="file" class="btn-1">Select Files</label>
 
-                <button class="btn-2" [disabled]="!selectedFiles" (click)="upload()">Upload Files</button>
+                <button class="btn-2" [disabled]="!selectedFiles || parent==undefined" (click)="upload()">Upload Files</button>
             </div>
-            <app-list-upload></app-list-upload>
+            <app-list-upload (childEvent)="msgFromChild($event)" ></app-list-upload>
         </div>
 
     </div>

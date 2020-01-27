@@ -9,6 +9,7 @@ import { FileUploadService } from '../file-upload.service';
 })
 export class DetailsUploadComponent implements OnInit {
   @Input() fileUpload: FileUpload;
+  @Input() level;
   constructor(private uploadService: FileUploadService) { }
    
   ngOnInit() {

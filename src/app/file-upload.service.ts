@@ -19,8 +19,8 @@ export class FileUploadService {
   getS3Bucket(): S3 {
     const bucket = new S3(
       {
-        accessKeyId: 'XXXX',
-        secretAccessKey: 'XXXXXX',
+        accessKeyId: 'XXXXX',
+        secretAccessKey: 'XXXXX',
         region: 'ap-south-1'
       }
     );
@@ -28,11 +28,11 @@ export class FileUploadService {
     return bucket;
   }
  
-  uploadfile(file) {
+  uploadfile(file,parent) {
     var FOLDER= localStorage.getItem('user') + "/"
     const params = {
       Bucket: this.BUCKET,
-      Key: FOLDER + file.name,
+      Key: parent+file.name,
       Body: file,
       ACL: 'public-read'
     };
@@ -87,6 +87,23 @@ export class FileUploadService {
       }
       console.log('Successfully deleted file.');
     });
+  }
+
+  CreateDiectory(path:string) {
+    const params = {
+      Bucket: this.BUCKET,
+      Key: path,
+      ACL: 'public-read'
+    }
+
+    this.getS3Bucket().putObject(params, function (err, data) {
+      if (err) {
+        console.log(err)
+      }
+      else {
+        console.log(data)
+      }
+    })
   }
 
 }

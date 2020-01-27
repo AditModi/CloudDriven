@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class FormUploadComponent implements OnInit {
 
   selectedFiles: FileList;
- 
+  parent:string=undefined
   constructor(private uploadService: FileUploadService,private router:Router) { }
  
   ngOnInit() {
@@ -22,11 +22,16 @@ export class FormUploadComponent implements OnInit {
  
   upload() {
     const file = this.selectedFiles.item(0);
-    this.uploadService.uploadfile(file);
+    this.uploadService.uploadfile(file,this.parent);
   }
  
   selectFile(event) {
     this.selectedFiles = event.target.files;
+  }
+
+  msgFromChild(msg){
+    this.parent=msg
+    //console.log("FromUpload: "+msg)
   }
 
 }
