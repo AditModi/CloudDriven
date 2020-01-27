@@ -6,7 +6,7 @@ import { FileUploadService } from '../file-upload.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
 
@@ -25,6 +25,7 @@ export class SignupComponent implements OnInit {
 
   onSignUp() {
     this.signstatus = 'signup';
+
   }
 
   onSignIn() {
@@ -32,7 +33,7 @@ export class SignupComponent implements OnInit {
   }
 
   singUpToAWS(email: HTMLInputElement,contactNo: HTMLInputElement,username: HTMLInputElement,password: HTMLInputElement) {
-    
+
     this.userName = username.value;
 
     const user = {
@@ -41,11 +42,11 @@ export class SignupComponent implements OnInit {
       attributes: {
           email: email.value,          // optional
           phone_number: contactNo.value,   // optional - E.164 number convention
-          // other custom attributes 
+          // other custom attributes
       }
     }
 
-    
+
     Auth.signUp(user)
       .then(data => {
         console.log(data);
@@ -53,7 +54,7 @@ export class SignupComponent implements OnInit {
         this.signstatus = "";
       })
       .catch(err => console.log(err));
-  
+
   // Auth.resendSignUp(username).then(() => {
   //     console.log('code resent successfully');
   // }).catch(e => {
@@ -66,7 +67,7 @@ export class SignupComponent implements OnInit {
     // After retrieving the confirmation code from the user
     Auth.confirmSignUp(this.userName, verifycode.value, {
       // Optional. Force user confirmation irrespective of existing alias. By default set to True.
-      forceAliasCreation: true    
+      forceAliasCreation: true
       }).then(data => {
         console.log(data)
         this.toVerifyEmail = false;

@@ -1,76 +1,63 @@
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-sm-12">
-            <h5 class="text-center">AWS Amplify Cognito User Authentication</h5>
+<div class="container-login" style="background-image: url('../../assets/pictures/clouda.jpg'); ">
+    <div class="wrap-login text-center" style="padding : 80px 55px 30px 55px; z-index: 2;">
+
+
+        <p class="sign-methods__link" (click)="onSignUp()">SignUp</p>
+        <p class="sign-methods__link" (click)="onSignIn()">SignIn</p>
+
+
+        <!-- User Sing up -->
+
+        <div *ngIf="signstatus == 'signup'">
+
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" #email>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputContact1" placeholder="Contact No" #contactNo>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" #username>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" #password>
+            </div>
+            <div align="center">
+                <button type="button" class="login-btn" (click)="singUpToAWS(email,contactNo,username,password)">Sign Up</button>
+            </div>
         </div>
-    </div>
 
-    <div class="row mt-5">
-        <div class="col-sm-12">
-            <ul class="sign-methods">
-                <li>
-                    <p class="sign-methods__link" (click)="onSignUp()">SignUp</p>
-                </li>
-                <li>
-                    <p class="sign-methods__link" (click)="onSignIn()">SignIn</p>
-                </li>
-            </ul>
+        <!-- User Sign In -->
+
+        <div *ngIf="signstatus == 'signin'">
+
+            <div class="form-group">
+
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" #email>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" #password>
+            </div>
+            <div align="center">
+                <button type="button" class="login-btn" (click)="signInToAWS(email, password)">Sign In</button>
+            </div>
         </div>
-    </div>
 
-    <!-- User Sing up -->
+        <!-- Email verification -->
 
-    <div class="row sign-up row-center" *ngIf="signstatus == 'signup'">
-        <div class="col-sm-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" #email>
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputContact1">Contact No</label>
-                  <input type="text" class="form-control" id="exampleInputContact1" placeholder="Contact No" #contactNo>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputUsername1">Username</label>
-                  <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" #username>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" #password>
-                </div>
-                <button type="button" class="btn btn-primary" (click)="singUpToAWS(email,contactNo,username,password)">Sign Up</button>
+        <div class="row row-center" *ngIf="toVerifyEmail">
+
+            <div class="form-group">
+                <label for="exampleInputverifycode1">Verifiacation Code</label>
+                <input type="number" class="form-control" id="exampleInputverifycode1" aria-describedby="verifyCodeHelp" placeholder="Enter the code" #verifycode>
+                <small id="emailHelp" class="form-text text-muted">Please enter the verification code that we sent to your email</small>
+            </div>
+            <button type="button" class="btn btn-success" (click)="onVerify(verifycode)">Verify</button>
+
         </div>
+
     </div>
-
-    <!-- User Sign In -->
-
-    <div class="row sign-in row-center" *ngIf="signstatus == 'signin'">
-        <div class="col-sm-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" #email>
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" #password>
-                </div>
-                <button type="button" class="btn btn-primary" (click)="signInToAWS(email, password)">Sign In</button>
-        </div>
-    </div>
-
-    <!-- Email verification -->
-    
-    <div class="row row-center" *ngIf="toVerifyEmail">
-        <div class="col-sm-6">
-                <div class="form-group">
-                  <label for="exampleInputverifycode1">Verifiacation Code</label>
-                  <input type="number" class="form-control" id="exampleInputverifycode1" aria-describedby="verifyCodeHelp" placeholder="Enter the code" #verifycode>
-                  <small id="emailHelp" class="form-text text-muted">Please enter the verification code that we sent to your email</small>
-                </div>
-                <button type="button" class="btn btn-success" (click)="onVerify(verifycode)">Verify</button>
-        </div>
-    </div>
-
 </div>

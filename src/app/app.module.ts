@@ -9,6 +9,8 @@ import { ListUploadComponent } from './list-upload/list-upload.component';
 import { DetailsUploadComponent } from './details-upload/details-upload.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ListUploadComponent,
     DetailsUploadComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,128 @@
+input {
+    outline: none;
+    border: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.wrap-login {
+    width: 500px;
+    background: #b3e0ff;
+    border-radius: 10px;
+    box-shadow: 0 3px 20px 0px #0099ff;
+    z-index: 2;
+}
+
+.wrap-login:hover {
+    box-shadow: 0 3px 20px 5px #0099ff;
+}
+
+.sign-methods__link {
+    display: block;
+    font-family: SourceSansPro-Bold;
+    font-size: 40px;
+    color: #4b2354;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.sign-methods__link:hover {
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.form-control {
+    font-family: SourceSansPro-Bold;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0099ff;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px 0 20px;
+    border-radius: 20px;
+}
+
+.focus-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 0px #0099ff;
+    transition: all 0.4s;
+}
+
+.form-control:hover {
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 0px #0099ff;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #0099ff;
+    border-radius: 25px;
+    font-family: SourceSansPro-SemiBold;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    box-shadow: 0 10px 30px 0px rgba(211, 74, 44, 0.3);
+}
+
+.create a {
+    color: darkslategrey;
+    padding-top: 15px;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(211, 74, 44, 0.5);
+    color: #E1BEE7;
+    text-decoration: underline;
+}
+
+.login-btn:hover {
+    background-color: #007acc;
+}
+
+@media (max-width: 480px) {
+    .wrap-login {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+input::placeholder {
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+}

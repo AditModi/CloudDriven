@@ -1,21 +1,21 @@
 <header class="header">
     <nav>
-      <div class="nav-brand">
-        <p>AWS Amplify Cognito Demo</p>
-      </div>
-  
-      <div class="button-section">
-        <button type="button" class="btn btn-info" (click)="onLogOut()">
+        <div class="nav-brand">
+            <p>AWS Amplify Cognito Demo</p>
+        </div>
+
+        <div id="butonid" class="button-section">
+            <button type="button" class="btn btn-info" (click)="onLogOut()">
           Logout
         </button>
-      </div>
+        </div>
     </nav>
-  </header>
-  
-  
-    <h5>Welcome, {{ uname }}</h5>
-  <ul>
+</header>
+
+
+<h5>Welcome, {{ uname }}</h5>
+<ul>
     <li>
-      <a routerLink='/upload'>Upload Files</a>
+        <a routerLink='/upload'>Upload Files</a>
     </li>
-  </ul>
+</ul>
