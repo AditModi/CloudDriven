@@ -4,7 +4,7 @@ body {}
 
 header {
     padding: 2px 0;
-    background: rgb(8, 188, 243);
+    background: #0055ff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
     position: fixed;
     width: 100%;
@@ -76,6 +76,7 @@ nav a:hover:after {
 @media screen and (max-width: 660px) {
     header {
         text-align: center;
+        height: 100%;
     }
     .logo-box {
         float: none;
