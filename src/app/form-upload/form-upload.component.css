@@ -362,8 +362,12 @@ nav a:hover:after {
 .uploadlabel {
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    font-weight: 1000;
-    text-shadow: 2px 2px 4px cyan;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.uploadlabel:hover {
+    font-size: 35px;
 }
 
 [type="file"] {
@@ -373,21 +377,21 @@ nav a:hover:after {
 }
 
 [type="file"]+label.btn-1 {
-    background-color: #f79159;
-    box-shadow: 0 6px #f57128;
+    background-color: #0099ff;
+    box-shadow: 0 6px #008ae6;
     -webkit-transition: none;
     transition: none;
 }
 
 [type="file"]+label.btn-1:hover {
-    box-shadow: 0 4px #f57128;
+    box-shadow: 0 4px #008ae6;
     top: 2px;
 }
 
 [type="file"]+label {
-    background: #f15d22;
+    background: #1a53ff;
     border: none;
-    border-radius: 5px;
+    border-radius: 60px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -404,13 +408,12 @@ nav a:hover:after {
 }
 
 .btn-2 {
-    background-color: #f79159;
-    box-shadow: 0 6px #f57128;
+    box-shadow: 0 6px #0040ff;
     -webkit-transition: none;
     transition: none;
-    background: #f15d22;
+    background: #1a53ff;
     border: none;
-    border-radius: 5px;
+    border-radius: 60px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -427,24 +430,28 @@ nav a:hover:after {
 }
 
 .btn-2:hover {
-    box-shadow: 0 4px #f57128;
+    box-shadow: 0 4px #0040ff;
     top: 2px;
 }
 
 .wrapper {
-    background-color: #fff;
+    background-color: #e6f5ff;
     border-radius: 1rem;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 600px;
     padding: 2rem;
     width: 100%;
     z-index: 1;
-    box-shadow: 2px 2px 8px 10px cyan;
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .wrapperhead {
     height: 560px;
     z-index: 0px;
-    background: url("https://benmarshall.me/wp-content/uploads/2018/08/background.gif");
     padding: 4rem;
+}
+
+.uploadlabel:hover {
+    font-size: 35px;
 }

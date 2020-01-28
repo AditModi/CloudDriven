@@ -1,15 +1,16 @@
-<div style="height: 1000px;">
+<div style="height:150px;"></div>
+<div>
     <!-- just to make scrolling effect possible -->
     <div class="wrapperhead" style="padding-top: 50px;">
         <div class="wrapper">
-            <p class="uploadlabel" style='margin-bottom:20px; text-align: center; color: blue; font-size: 30px;'>You Can Upload File, Click On The Below Button</p>
+            <p class="uploadlabel" style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>Upload Files</p>
             <div class="text-center">
                 <input type="file" id="file" (change)="selectFile($event)" />
                 <label for="file" class="btn-1">Select Files</label>
-
+                <br/>
                 <button class="btn-2" [disabled]="!selectedFiles || parent==undefined" (click)="upload()">Upload Files</button>
             </div>
-            <app-list-upload (childEvent)="msgFromChild($event)" ></app-list-upload>
+            <app-list-upload (childEvent)="msgFromChild($event)"></app-list-upload>
         </div>
 
     </div>
