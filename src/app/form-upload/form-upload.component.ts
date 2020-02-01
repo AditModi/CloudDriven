@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class FormUploadComponent implements OnInit {
 
   selectedFiles: FileList;
+  files:any=[]
   parent:string=undefined
   constructor(private uploadService: FileUploadService,private router:Router) { }
  
@@ -23,19 +24,35 @@ export class FormUploadComponent implements OnInit {
   upload() {
     var i
     var file
-    for(i=0;i<this.selectedFiles.length;i++){
-      file = this.selectedFiles.item(i);
+    for(i=0;i<this.files.length;i++){
+      file = this.files[i];
       this.uploadService.uploadfile(file,this.parent);    
     }
+    this.files.splice(0,this.files.length)
     
   }
- 
+  
   selectFile(event) {
     this.selectedFiles = event.target.files;
-    //var i
-    //for(i=0;i<this.selectedFiles.length;i++){
-      //console.log(this.selectedFiles.item(i).name)
-    //}
+    var i
+    for(i=0;i<this.selectedFiles.length;i++){
+      console.log(this.selectedFiles.item(i).name)
+    }
+    
+    
+  }
+
+  uploadFile(event) {
+    
+    for (let index = 0; index < event.length; index++) {
+      const element = event[index];
+      this.files.push(element)
+      
+    }  
+  }
+
+  deleteAttachment(index) {
+    this.files.splice(index, 1)
   }
 
   msgFromChild(msg){

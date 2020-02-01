@@ -1,40 +1,40 @@
-<div *ngIf="level>0">
-  <button class="button btn-info" *ngIf='showFile' (click)='showFiles(false)'>Hide Files</button>
+<div *ngIf="level>0" class="text-center" style="margin-top:20px">
+    <button class="button btn-info" *ngIf='showFile' (click)='showFiles(false)'>Hide Files</button>
 
-  <button class="button btn-info" *ngIf='!showFile' (click)='showFiles(true)'>Show Files</button>
+    <button class="button btn-info " *ngIf='!showFile' (click)='showFiles(true)'>Show Files</button>
 </div>
 <div *ngIf="level==0" class="panel-heading">
-  <b>Root directory</b><br />
-  <p><i>In this directory you can securely store your all files.</i></p>
-  <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">{{ uname  }}</button>
+    <b>Root directory</b><br />
+    <p><i>In this directory you can securely store your all files.</i></p>
+    <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">{{ uname  }}</button>
 </div>
 <div *ngIf="level>0" [hidden]="!showFile">
-  <div class="panel panel-primary">
-    <div *ngIf="level>0" class="panel-heading">
-      <br/>
-      <button (click)="revTraverse()">back</button>
-      <br/>
-      <h3>List of Files & directories</h3>
-    </div>
-    <h5>Directories:</h5><br />
-    <div *ngFor="let file of fileUploads | async">
-      <div class="panel-body" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 ">
-        <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">
+    <div class="panel panel-primary">
+        <div *ngIf="level>0" class="panel-heading">
+            <br/>
+            <button (click)="revTraverse()">back</button>
+            <br/>
+            <h3>List of Files & directories</h3>
+        </div>
+        <h5>Directories:</h5><br />
+        <div *ngFor="let file of fileUploads | async">
+            <div class="panel-body" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 ">
+                <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">
           {{file.name}}
           <br />
         </button>
 
-      </div>
-    </div>
-    <br />
-    <hr style="border-top:2px solid #0055ff;" />
-    <h5>Files:</h5><br />
-    <div *ngFor="let file of fileUploads | async">
-      <app-details-upload [level]='level' [fileUpload]='file'></app-details-upload>
+            </div>
+        </div>
+        <br />
+        <hr style="border-top:2px solid #0055ff;" />
+        <h5>Files:</h5><br />
+        <div *ngFor="let file of fileUploads | async">
+            <app-details-upload [level]='level' [fileUpload]='file'></app-details-upload>
 
+        </div>
     </div>
-  </div>
-  <hr style="border-top:2px solid #0055ff;" />
-  <input type="text" id="dname" class="form-control" [(ngModel)]="dname" placeholder="Enter directory name" /><br />
-  <button (click)="createDirectory()" class="btn btn-primary">+ Create Directory</button>
+    <hr style="border-top:2px solid #0055ff;" />
+    <input type="text" id="dname" class="form-control" [(ngModel)]="dname" placeholder="Enter directory name" /><br />
+    <button (click)="createDirectory()" class="btn btn-primary">+ Create Directory</button>
 </div>

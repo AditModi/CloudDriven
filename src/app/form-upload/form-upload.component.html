@@ -1,25 +1,43 @@
-<div style="height:150px;"></div>
+<div style="height:100px;"></div>
 <div>
-    
+
     <!-- just to make scrolling effect possible -->
     <div class="wrapperhead" style="padding-top: 50px;">
         <div class="wrapper">
-            <div *ngIf="parent!=undefined"> 
-                <h5>Current directory: {{ parent }} </h5>
+
+
+
+            <div *ngIf="parent!=undefined" class="text-center">
+                <h5 style="font-weight: 500;">Current Directory: {{ parent }} </h5>
             </div>
-            
+
             <p class="uploadlabel" *ngIf="parent!=undefined" style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>Upload Files</p>
             <div class="text-center" *ngIf="parent!=undefined">
-                <input type="file" id="file" (change)="selectFile($event)" multiple />
+                <input type="file" id="file" (change)="uploadFile($event.target.files)" multiple />
                 <label for="file" class="btn-1">Select Files</label>
-                <br/>
-                <button class="btn-2" [disabled]="!selectedFiles" (click)="upload()">Upload Files</button>
+
+
+                <p style="font-size: 20px;font-weight: 500;">Or</p>
+                <p style="font-size: 20px;font-weight: 500;">Drag Your Files Below:</p>
+                <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+                    <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+                </div>
+                <div class="files-list" *ngFor="let file of files;let i= index">
+                    <p> {{ file.name }} </p>
+                    <button class="delete-file" (click)="deleteAttachment(i)">
+                        <img src="../../assets/Recycle_Bin_Full.png">
+                    </button>
+                </div>
+
+
+                <button class="btn-2" [disabled]="!files" (click)="upload()">Upload Files</button>
             </div>
             <app-list-upload (childEvent)="msgFromChild($event)"></app-list-upload>
         </div>
 
     </div>
 </div>
+<div style="height: 50px;"></div>
 
 <!-- Jquery needed -->
 

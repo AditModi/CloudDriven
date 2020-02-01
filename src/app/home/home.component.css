@@ -113,10 +113,11 @@
     .home {
         width: 100%;
         height: 100vh;
-        background-image: url('../../assets/pictures/clouds-clipart-png-7-transparent.png');
+        background-image: url('../../assets/pictures/cloudback.jfif');
         background-position: center top;
         background-size: 1100px;
         background-repeat: no-repeat;
+        background-size: cover;
         background-color: white;
     }
 
@@ -170,7 +171,7 @@
     .content__container:before {
         position: absolute;
         top: 0;
-        color: blue;
+        color: #006bb3;
         font-size: 42px;
         line-height: 40px;
         -webkit-animation-name: opacity;
@@ -185,7 +186,8 @@
         display: inline;
         float: left;
         margin: 0;
-        text-shadow: 2px 2px 4px #3F6DEC;
+        text-shadow: 3px 3px 4px #80ccff;
+        color: #008ae6;
     }
 
     .platform {
@@ -199,8 +201,8 @@
         font-family: 'Lato', sans-serif;
         font-size: 35px;
         line-height: 40px;
-        color: #ecf0f1;
-        text-shadow: 2px 2px 4px #3F6DEC;
+        color: #008ae6;
+        text-shadow: 3px 3px 4px #80ccff;
         margin-top: 50px;
     }
 
@@ -215,6 +217,8 @@
         animation-name: change;
         animation-duration: 10s;
         animation-iteration-count: infinite;
+        color: #007acc;
+        text-shadow: 3px 3px 4px #80ccff;
     }
 
     .content__container__list__item {
@@ -449,5 +453,9 @@
     }
 
     .footer {
-        background-color: #0055ff;
+        background-color: #008ae6;
+    }
+
+    .videodiv {
+        background-color: #008ae6;
     }
