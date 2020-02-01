@@ -11,7 +11,8 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { DragDropDirective } from './drag-drop.directive'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormsModule} from '@angular/forms'
     SignupComponent,
     DashboardComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    DragDropDirective
   ],
   imports: [
     BrowserModule,
