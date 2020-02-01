@@ -10,7 +10,7 @@
             
             <p class="uploadlabel" *ngIf="parent!=undefined" style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>Upload Files</p>
             <div class="text-center" *ngIf="parent!=undefined">
-                <input type="file" id="file" (change)="selectFile($event)" />
+                <input type="file" id="file" (change)="selectFile($event)" multiple />
                 <label for="file" class="btn-1">Select Files</label>
                 <br/>
                 <button class="btn-2" [disabled]="!selectedFiles" (click)="upload()">Upload Files</button>

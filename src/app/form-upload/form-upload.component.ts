@@ -21,12 +21,21 @@ export class FormUploadComponent implements OnInit {
   }
  
   upload() {
-    const file = this.selectedFiles.item(0);
-    this.uploadService.uploadfile(file,this.parent);
+    var i
+    var file
+    for(i=0;i<this.selectedFiles.length;i++){
+      file = this.selectedFiles.item(i);
+      this.uploadService.uploadfile(file,this.parent);    
+    }
+    
   }
  
   selectFile(event) {
     this.selectedFiles = event.target.files;
+    //var i
+    //for(i=0;i<this.selectedFiles.length;i++){
+      //console.log(this.selectedFiles.item(i).name)
+    //}
   }
 
   msgFromChild(msg){
