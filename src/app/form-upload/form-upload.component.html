@@ -1,9 +1,10 @@
-<div style="height:150px;"></div>
+<div style="height:100px;"></div>
 <div>
 
     <!-- just to make scrolling effect possible -->
     <div class="wrapperhead" style="padding-top: 50px;">
         <div class="wrapper">
+<<<<<<< HEAD
             <div *ngIf="parent!=undefined">
                 <h5>Current directory: {{ parent }} </h5>
             </div>
@@ -11,6 +12,13 @@
             <p class="uploadlabel" *ngIf="parent!=undefined"
                 style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>
                 Upload Files</p>
+=======
+            <div *ngIf="parent!=undefined" class="text-center">
+                <h5>Current directory: {{ parent }} </h5>
+            </div>
+
+            <p class="uploadlabel" *ngIf="parent!=undefined" style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>Upload Files</p>
+>>>>>>> d0919ebde461abde7fdcfc361a29ec5e280917b4
             <div class="text-center" *ngIf="parent!=undefined">
                 <input type="file" id="file" (change)="uploadFile($event.target.files)" multiple />
                 <label for="file" class="btn-1">Select Files</label>
@@ -37,6 +45,7 @@
 
     </div>
 </div>
+<div style="height: 50px;"></div>
 
 <!-- Jquery needed -->
 

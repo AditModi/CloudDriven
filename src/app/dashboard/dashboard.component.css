@@ -20,3 +20,51 @@ nav {
     padding: 5px;
     margin-bottom: 0;
 }
+
+.btn-2 {
+    box-shadow: 0 6px #0040ff;
+    -webkit-transition: none;
+    transition: none;
+    background: #1a53ff;
+    border: none;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
+}
+
+.btn-2:hover {
+    box-shadow: 0 4px #0040ff;
+    top: 2px;
+}
+
+.wrapper {
+    background-color: #e6f5ff;
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 2rem;
+    width: 100%;
+    z-index: 1;
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.wrapperhead {
+    height: 560px;
+    z-index: 0px;
+}
+
+.uploadlink:hover {
+    font-size: 25px;
+}

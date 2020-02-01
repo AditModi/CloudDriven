@@ -1,18 +1,21 @@
-<div style="height:70px;"></div>
-<div class="nav-brand" style="">
-    <p>AWS Amplify Cognito Demo</p>
+<div style="height:80px;"></div>
+<div class="wrapperhead" style="padding-top: 50px;">
+    <div class="wrapper" style="padding-top:0px">
+        <div style="height:70px;"></div>
+        <div class="nav-brand text-center" style="">
+            <p class="uploadlabel" style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>AWS Congnito Demo</p>
+        </div>
+
+        <h5 class="text-center">Welcome, {{ uname }}</h5>
+        <ul class="text-center" style="list-style-type: none;">
+            <li>
+                <a routerLink='/upload' class="uploadlink" style="margin-right: 30px;font-size: 20px;">Upload Files</a>
+            </li>
+        </ul>
+
+        <div id="butonid" class="text-center button-section">
+
+            <button class="btn-2" (click)="onLogOut()">Log Out</button>
+        </div>
+    </div>
 </div>
-
-<div id="butonid" class="button-section">
-    <button type="button" class="btn btn-info" (click)="onLogOut()">
-          Logout
-        </button>
-</div>
-
-
-<h5>Welcome, {{ uname }}</h5>
-<ul>
-    <li>
-        <a routerLink='/upload'>Upload Files</a>
-    </li>
-</ul>
