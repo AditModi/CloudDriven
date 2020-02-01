@@ -4,23 +4,22 @@
     <!-- just to make scrolling effect possible -->
     <div class="wrapperhead" style="padding-top: 50px;">
         <div class="wrapper">
-            
 
-            
+
+
             <div *ngIf="parent!=undefined" class="text-center">
-                <h5>Current directory: {{ parent }} </h5>
+                <h5 style="font-weight: 500;">Current Directory: {{ parent }} </h5>
             </div>
 
             <p class="uploadlabel" *ngIf="parent!=undefined" style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>Upload Files</p>
             <div class="text-center" *ngIf="parent!=undefined">
                 <input type="file" id="file" (change)="uploadFile($event.target.files)" multiple />
                 <label for="file" class="btn-1">Select Files</label>
-                <br />
 
-                or<br/>
-                drag your files below:
-                <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop
-                    (onFileDropped)="uploadFile($event)">
+
+                <p style="font-size: 20px;font-weight: 500;">Or</p>
+                <p style="font-size: 20px;font-weight: 500;">Drag Your Files Below:</p>
+                <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
                     <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
                 </div>
                 <div class="files-list" *ngFor="let file of files;let i= index">
