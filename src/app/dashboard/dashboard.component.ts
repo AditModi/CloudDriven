@@ -9,7 +9,7 @@ import { Auth } from "aws-amplify";
 })
 export class DashboardComponent implements OnInit {
 
-  
+
   uname:string="";
   constructor(private router: Router) {}
   user:any;
@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
       alert("You are not logged in")
       this.router.navigate(['login'])
     }
-    
+
   }
 
   onLogOut() {
@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
         console.log(data);
         console.log("You are successfully logged out");
         localStorage.removeItem('user')
-        this.router.navigate([""]);
+        this.router.navigate(["/login"]);
       })
       .catch(err => console.log(err));
   }

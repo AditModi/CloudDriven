@@ -447,7 +447,7 @@ nav a:hover:after {
 }
 
 .wrapperhead {
-    height: 560px;
+    height: auto;
     z-index: 0px;
     padding: 4rem;
 }
