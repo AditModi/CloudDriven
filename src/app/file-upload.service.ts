@@ -19,8 +19,8 @@ export class FileUploadService {
   getS3Bucket(): S3 {
     const bucket = new S3(
       {
-        accessKeyId: 'XXXX',
-        secretAccessKey: 'XXX',
+        accessKeyId: 'AKIA3LQVK65OSZMZ35OO',
+        secretAccessKey: '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',
         region: 'ap-south-1'
       }
     );
