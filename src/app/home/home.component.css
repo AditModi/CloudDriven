@@ -113,10 +113,11 @@
     .home {
         width: 100%;
         height: 100vh;
-        background-image: url('../../assets/pictures/clouds-clipart-png-7-transparent.png');
+        background-image: url('../../assets/pictures/cloudback.jfif');
         background-position: center top;
         background-size: 1100px;
         background-repeat: no-repeat;
+        background-size: cover;
         background-color: white;
     }
 
