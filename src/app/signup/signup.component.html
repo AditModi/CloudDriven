@@ -55,7 +55,8 @@
                 <input type="number" class="form-control" id="exampleInputverifycode1" aria-describedby="verifyCodeHelp" placeholder="Enter the code" #verifycode>
                 <small id="emailHelp" class="form-text text-muted">Please enter the verification code that we sent to your email</small>
             </div>
-            <button type="button" class="btn btn-success" (click)="onVerify(verifycode)">Verify</button>
+            
+            <button type="button" class="btn btn-success form-control" (click)="onVerify(verifycode)">Verify</button>
 
         </div>
 

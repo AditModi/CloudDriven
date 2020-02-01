@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Personal digital storage';
   description = 'powered by Amazon S3';
+  
 }

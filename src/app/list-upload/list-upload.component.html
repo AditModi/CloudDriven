@@ -4,28 +4,37 @@
   <button class="button btn-info" *ngIf='!showFile' (click)='showFiles(true)'>Show Files</button>
 </div>
 <div *ngIf="level==0" class="panel-heading">
-  Root directory<br />
+  <b>Root directory</b><br />
+  <p><i>In this directory you can securely store your all files.</i></p>
   <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">{{ uname  }}</button>
 </div>
-<div [hidden]="!showFile">
+<div *ngIf="level>0" [hidden]="!showFile">
   <div class="panel panel-primary">
-    <div *ngIf="level>0" class="panel-heading">List of Files & directories</div>
-      <input type="text" id="dname" class="form-control" [(ngModel)]="dname" placeholder="Enter directory name" />
-      <button (click)="createDirectory()" class="btn btn-primary">+ Create Folder</button>
-      <br />
-      Directories:<br/>
-      <div *ngFor="let file of fileUploads | async">
-        <div class="panel-body" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 ">
-          <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">
-            {{file.name}}
-          </button>
-        </div>
-      </div>
+    <div *ngIf="level>0" class="panel-heading">
       <br/>
-      Files:<br/>
-      <div *ngFor="let file of fileUploads | async">
-        <app-details-upload [level]='level' [fileUpload]='file'></app-details-upload>
-      
+      <button (click)="revTraverse()">back</button>
+      <br/>
+      <h3>List of Files & directories</h3>
+    </div>
+    <h5>Directories:</h5><br />
+    <div *ngFor="let file of fileUploads | async">
+      <div class="panel-body" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 ">
+        <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">
+          {{file.name}}
+          <br />
+        </button>
+
+      </div>
+    </div>
+    <br />
+    <hr style="border-top:2px solid #0055ff;" />
+    <h5>Files:</h5><br />
+    <div *ngFor="let file of fileUploads | async">
+      <app-details-upload [level]='level' [fileUpload]='file'></app-details-upload>
+
     </div>
   </div>
+  <hr style="border-top:2px solid #0055ff;" />
+  <input type="text" id="dname" class="form-control" [(ngModel)]="dname" placeholder="Enter directory name" /><br />
+  <button (click)="createDirectory()" class="btn btn-primary">+ Create Directory</button>
 </div>
