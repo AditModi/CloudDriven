@@ -76,7 +76,6 @@ nav a:hover:after {
 @media screen and (max-width: 660px) {
     header {
         text-align: center;
-        height: 100%;
     }
     .logo-box {
         float: none;
