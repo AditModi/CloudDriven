@@ -73,20 +73,34 @@ nav a:hover:after {
     width: 100%;
 }
 
+.menuIcon,
+.menuDiv {
+    display: none;
+}
+
 @media screen and (max-width: 660px) {
-    header {
-        text-align: center;
-    }
     .logo-box {
-        float: none;
-        display: inline-block;
+        float: left;
+        display: block;
         margin: 0 0 16px 0;
     }
     ul {
         float: none;
+        margin-top: 70px;
     }
     nav li:first-of-type {
         margin-left: 0;
+    }
+    .menuIcon {
+        display: block;
+    }
+    .menuDiv {
+        display: block;
+        float: right;
+        top: 0;
+        right: 40px;
+        position: absolute;
+        margin-bottom: 20px;
     }
 }
 
