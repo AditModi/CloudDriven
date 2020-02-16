@@ -20,7 +20,7 @@ export class DetailsUploadComponent implements OnInit {
   }
   delete(file) {
     this.uploadService.deleteFile(file);
-    window.location.reload();
+    //window.location.reload();
   }
 
   copyText(val: string){
