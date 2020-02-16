@@ -12,7 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {FormsModule} from '@angular/forms';
-import { DragDropDirective } from './drag-drop.directive'
+import { DragDropDirective } from './drag-drop.directive';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DragDropDirective } from './drag-drop.directive'
     BrowserModule,
     AppRoutingModule,
     ClipboardModule,
-    FormsModule
+    FormsModule,
+    NgxQRCodeModule
   ],
   providers: [FileUploadService],
   bootstrap: [AppComponent]

@@ -1,38 +1,38 @@
 {
     "providers": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-sdp1-env-164528-authRole",
-            "UnauthRoleArn": "arn:aws:iam::780655064925:role/amplify-sdp1-env-164528-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::780655064925:role/amplify-sdp1-env-164528-authRole",
+            "AuthRoleName": "amplify-sdp-env-172811-authRole",
+            "UnauthRoleArn": "arn:aws:iam::780655064925:role/amplify-sdp-env-172811-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::780655064925:role/amplify-sdp-env-172811-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-sdp1-env-164528-deployment",
-            "UnauthRoleName": "amplify-sdp1-env-164528-unauthRole",
-            "StackName": "amplify-sdp1-env-164528",
-            "StackId": "arn:aws:cloudformation:us-east-1:780655064925:stack/amplify-sdp1-env-164528/2e37f3e0-3b76-11ea-9941-0a2de5ab949d",
-            "AmplifyAppId": "d1aytc76fcjxqy"
+            "DeploymentBucketName": "amplify-sdp-env-172811-deployment",
+            "UnauthRoleName": "amplify-sdp-env-172811-unauthRole",
+            "StackName": "amplify-sdp-env-172811",
+            "StackId": "arn:aws:cloudformation:us-east-1:780655064925:stack/amplify-sdp-env-172811/22137d00-44ea-11ea-8872-0e3b177c99d5",
+            "AmplifyAppId": "d2t4ltd29tgov2"
         }
     },
     "auth": {
-        "sdp125a10f1f": {
+        "sdp8af4d5e6": {
             "service": "Cognito",
             "providerPlugin": "awscloudformation",
             "dependsOn": [],
             "customAuth": false,
             "providerMetadata": {
-                "s3TemplateURL": "https://s3.amazonaws.com/amplify-sdp1-env-164528-deployment/amplify-cfn-templates/auth/sdp125a10f1f-cloudformation-template.yml",
-                "logicalId": "authsdp125a10f1f"
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-sdp-env-172811-deployment/amplify-cfn-templates/auth/sdp8af4d5e6-cloudformation-template.yml",
+                "logicalId": "authsdp8af4d5e6"
             },
-            "lastPushTimeStamp": "2020-01-21T14:40:32.789Z",
+            "lastPushTimeStamp": "2020-02-01T13:21:44.539Z",
             "output": {
-                "AppClientSecret": "153im01efsds8059jj9na7i7qog7u7fa0fb9n55qek120chhuvm9",
-                "UserPoolId": "us-east-1_OiUgsgxpq",
-                "AppClientIDWeb": "5ucvokblofc7ldnm2r2kvhl0d4",
-                "AppClientID": "54j2m72isantcj248v8krs8t29",
-                "IdentityPoolId": "us-east-1:8497a086-12fd-4c0b-bb3d-d1cd47abc0d8",
-                "IdentityPoolName": "sdp125a10f1f_identitypool_25a10f1f__env",
-                "UserPoolName": "sdp125a10f1f_userpool_25a10f1f"
+                "AppClientSecret": "1osu0le4tbs347mg64kq6jfgvl0thelp7ur6f8fgump1iffk6e2g",
+                "UserPoolId": "us-east-1_NdbIddJDK",
+                "AppClientIDWeb": "7uvlnv3jmm34c32o8kanknc605",
+                "AppClientID": "4esc015fhfeqvp17tka2vhmtr9",
+                "IdentityPoolId": "us-east-1:95e3dd2a-9c9b-40e4-8c95-057e6d75fc4d",
+                "IdentityPoolName": "sdp8af4d5e6_identitypool_8af4d5e6__env",
+                "UserPoolName": "sdp8af4d5e6_userpool_8af4d5e6"
             },
-            "lastPushDirHash": "M/vWRxFt9NpPMro4K/tUswhFRh4="
+            "lastPushDirHash": "pI94PKzSohcnID2mOD7dA4cWWi0="
         }
     },
     "hosting": {
@@ -40,17 +40,21 @@
             "service": "S3AndCloudFront",
             "providerPlugin": "awscloudformation",
             "providerMetadata": {
-                "s3TemplateURL": "https://s3.amazonaws.com/amplify-sdp1-env-164528-deployment/amplify-cfn-templates/hosting/template.json",
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-sdp-env-172811-deployment/amplify-cfn-templates/hosting/template.json",
                 "logicalId": "hostingS3AndCloudFront"
             },
-            "lastPushTimeStamp": "2020-01-21T14:40:32.790Z",
+            "lastPushTimeStamp": "2020-02-01T13:21:44.544Z",
             "output": {
-                "S3BucketSecureURL": "https://1-20200120164944-hostingbucket-env.s3.amazonaws.com",
-                "WebsiteURL": "http://1-20200120164944-hostingbucket-env.s3-website-us-east-1.amazonaws.com",
+                "CloudFrontSecureURL": "https://deb8gig0dwsr7.cloudfront.net",
+                "S3BucketSecureURL": "https://clouddriven.live-env.s3.amazonaws.com",
+                "CloudFrontOriginAccessIdentity": "E11TB6UUPFZL7U",
+                "WebsiteURL": "http://clouddriven.live-env.s3-website-us-east-1.amazonaws.com",
+                "CloudFrontDistributionID": "E2KGJR4V9RPE7R",
                 "Region": "us-east-1",
-                "HostingBucketName": "1-20200120164944-hostingbucket-env"
+                "HostingBucketName": "clouddriven.live-env",
+                "CloudFrontDomainName": "deb8gig0dwsr7.cloudfront.net"
             },
-            "lastPushDirHash": "oMj/+j6XMhEoAABGHa6m7CG8iic="
+            "lastPushDirHash": "FU4BJsm7i8og/s1dlu3Ikt7MLtA="
         }
     }
 }

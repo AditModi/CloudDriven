@@ -4,7 +4,7 @@ body {}
 
 header {
     padding: 2px 0;
-    background: #0055ff;
+    background: #008ae6;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
     position: fixed;
     width: 100%;
@@ -73,21 +73,34 @@ nav a:hover:after {
     width: 100%;
 }
 
+.menuIcon,
+.menuDiv {
+    display: none;
+}
+
 @media screen and (max-width: 660px) {
-    header {
-        text-align: center;
-        height: 100%;
-    }
     .logo-box {
-        float: none;
-        display: inline-block;
+        float: left;
+        display: block;
         margin: 0 0 16px 0;
     }
     ul {
         float: none;
+        margin-top: 70px;
     }
     nav li:first-of-type {
         margin-left: 0;
+    }
+    .menuIcon {
+        display: block;
+    }
+    .menuDiv {
+        display: block;
+        float: right;
+        top: 0;
+        right: 40px;
+        position: absolute;
+        margin-bottom: 20px;
     }
 }
 

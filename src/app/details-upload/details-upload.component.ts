@@ -10,10 +10,13 @@ import { FileUploadService } from '../file-upload.service';
 export class DetailsUploadComponent implements OnInit {
   @Input() fileUpload: FileUpload;
   @Input() level;
+  qr_url:string;
+  qr_flag:boolean;
+
   constructor(private uploadService: FileUploadService) { }
    
   ngOnInit() {
-    
+    this.qr_flag=false
   }
   delete(file) {
     this.uploadService.deleteFile(file);
@@ -34,6 +37,11 @@ export class DetailsUploadComponent implements OnInit {
       document.body.removeChild(selBox);
       console.log(val)
       alert("Link copied to clipboard!!")
+    }
+
+    generateQR(link:string){
+      this.qr_flag=true
+      this.qr_url=link
     }
 
 }
