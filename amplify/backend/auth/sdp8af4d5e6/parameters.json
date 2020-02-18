@@ -1,6 +1,6 @@
 {
     "identityPoolName": "sdp8af4d5e6_identitypool_8af4d5e6",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "sdp8af4d5e6",
     "userPoolName": "sdp8af4d5e6_userpool_8af4d5e6",
     "autoVerifiedAttributes": [

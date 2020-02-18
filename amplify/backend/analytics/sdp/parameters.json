@@ -1,0 +1,20 @@
+{
+    "appName": "sdp",
+    "roleName": "pinpointLambdaRole11ee6e58",
+    "cloudWatchPolicyName": "cloudWatchPolicy11ee6e58",
+    "pinpointPolicyName": "pinpointPolicy11ee6e58",
+    "authPolicyName": "pinpoint_amplify_11ee6e58",
+    "unauthPolicyName": "pinpoint_amplify_11ee6e58",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
