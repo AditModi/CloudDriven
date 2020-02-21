@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { Auth } from "aws-amplify";
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,7 @@ export class DashboardComponent implements OnInit {
 
 
   uname:string="";
-  constructor(private router: Router) {}
+  constructor(private router: Router,private logservice:LoginService) {}
   user:any;
   ngOnInit() {
     // if( Auth.currentSession()==null ){
@@ -36,6 +37,7 @@ export class DashboardComponent implements OnInit {
         console.log(data);
         console.log("You are successfully logged out");
         localStorage.removeItem('user')
+        this.logservice.change(false)
         this.router.navigate(["/login"]);
       })
       .catch(err => console.log(err));

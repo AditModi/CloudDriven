@@ -14,6 +14,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import {FormsModule} from '@angular/forms';
 import { DragDropDirective } from './drag-drop.directive';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
     FormsModule,
     NgxQRCodeModule
   ],
-  providers: [FileUploadService],
+  providers: [FileUploadService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

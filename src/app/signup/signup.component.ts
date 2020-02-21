@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Auth } from 'aws-amplify';
 import { Router } from '@angular/router';
 import { FileUploadService } from '../file-upload.service';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +15,7 @@ export class SignupComponent implements OnInit {
   toVerifyEmail: boolean = false;
   userName: string;
 
-  constructor( private route: Router,private uploadService:FileUploadService) { }
+  constructor( private route: Router,private uploadService:FileUploadService,private logservice:LoginService) { }
 
   ngOnInit() {
     if(localStorage.getItem('user')!=null){
@@ -88,9 +89,12 @@ export class SignupComponent implements OnInit {
     Auth.signIn(authInfo).then(user => {
       console.log(user);
       localStorage.setItem('user',authInfo.username)
+      this.logservice.change(true)
       this.route.navigate(['/dashboard'])
     })
       .catch(err => console.log(err));
+    
+      
 
   }
 

@@ -21,8 +21,8 @@
                 <li><a href="">contact</a></li>
                 <li><a routerLink="/dashboard">Dashboard</a></li>
 
-                <li><a routerLink="/login">login</a></li>
-
+                <li *ngIf="!logFlag"><a routerLink="/login">login</a></li>
+                <li *ngIf="logFlag"><a href="#" (click)="logout()">logout</a></li>
 
             </ul>
         </nav>
