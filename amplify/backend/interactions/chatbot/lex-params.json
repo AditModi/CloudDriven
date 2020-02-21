@@ -1,0 +1,28 @@
+{
+    "resourceName": "chatbot",
+    "botName": "chatbot",
+    "intents": [
+        {
+            "cancelMessage": "{name} is not our name",
+            "confirmationQuestion": "{name}",
+            "slots": [
+                {
+                    "name": "name",
+                    "type": "AMAZON.DE_FIRST_NAME",
+                    "prompt": "what is your name?",
+                    "required": true,
+                    "customType": false
+                }
+            ],
+            "utterances": [
+                "hi",
+                "hello"
+            ],
+            "intentName": "greetings",
+            "newSlotTypes": []
+        }
+    ],
+    "outputVoice": "Matthew",
+    "sessionTimeout": 5,
+    "coppa": false
+}

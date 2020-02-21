@@ -29,13 +29,13 @@ button:hover {
 .wrap-login {
     width: 500px;
     background: #b3e0ff;
-    border-radius: 10px;
-    box-shadow: 0 3px 20px 0px #0099ff;
+    border-radius: 1rem;
     z-index: 2;
+    box-shadow: 8px 8px 5px #aaaaaa;
 }
 
 .wrap-login:hover {
-    box-shadow: 0 3px 20px 5px #0099ff;
+    box-shadow: 17px 17px 5px #aaaaaa;
 }
 
 .sign-methods__link {

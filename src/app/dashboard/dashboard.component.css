@@ -49,15 +49,18 @@ nav {
 }
 
 .wrapper {
-    background-color: #e6f5ff;
+    background-color: #b3e0ff;
     border-radius: 1rem;
     margin: 0 auto;
     max-width: 600px;
     padding: 2rem;
     width: 100%;
     z-index: 1;
-    border: 1px solid #BFBFBF;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 8px 8px 5px #aaaaaa;
+}
+
+.wrapper:hover {
+    box-shadow: 17px 17px 5px #aaaaaa;
 }
 
 .wrapperhead {
