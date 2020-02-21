@@ -1,12 +1,12 @@
 # Personal Digital Storage and Secure Sharing
-
-   
-![ss-converted (1)-09](https://user-images.githubusercontent.com/48589838/75035482-93a43180-54d5-11ea-9f11-ba3ec94f5666.jpg)
-
-![ss-converted (1)-07](https://user-images.githubusercontent.com/48589838/75035573-c77f5700-54d5-11ea-8138-818f0275c781.jpg)
-![ss-converted (1)-01](https://user-images.githubusercontent.com/48589838/75035576-c8b08400-54d5-11ea-837c-94b80b4d90a6.jpg)
-![ss-converted (1)-02](https://user-images.githubusercontent.com/48589838/75035579-c9e1b100-54d5-11ea-98ee-1f7b3c974a41.jpg)
-![ss-converted (1)-03](https://user-images.githubusercontent.com/48589838/75035580-ca7a4780-54d5-11ea-90a7-6ae613893e0e.jpg)
-![ss-converted (1)-04](https://user-images.githubusercontent.com/48589838/75035582-cb12de00-54d5-11ea-8f6e-9b66286592dd.jpg)
-![ss-converted (1)-05](https://user-images.githubusercontent.com/48589838/75035584-cbab7480-54d5-11ea-8e96-3c760e003c9d.jpg)
-![ss-converted (1)-06](https://user-images.githubusercontent.com/48589838/75035585-cc440b00-54d5-11ea-8ab3-41f8e5341ff5.jpg)
+![ss-converted-07](https://user-images.githubusercontent.com/48589838/75035763-3fe61800-54d6-11ea-90ac-13ca31365641.jpg)
+![ss-converted-08](https://user-images.githubusercontent.com/48589838/75035764-407eae80-54d6-11ea-932b-986c212f58bf.jpg)
+![ss-converted-09](https://user-images.githubusercontent.com/48589838/75035765-41174500-54d6-11ea-8311-3793bc00ebd1.jpg)
+![ss-converted-01](https://user-images.githubusercontent.com/48589838/75035772-43799f00-54d6-11ea-9e59-832b4d9862dc.jpg)
+![ss-converted-02](https://user-images.githubusercontent.com/48589838/75035774-44123580-54d6-11ea-854d-815f0b8ff1a4.jpg)
+![ss-converted-03](https://user-images.githubusercontent.com/48589838/75035775-44aacc00-54d6-11ea-8533-385f38170db3.jpg)
+![ss-converted-04](https://user-images.githubusercontent.com/48589838/75035776-45436280-54d6-11ea-8deb-9605abb46e29.jpg)
+![ss-converted-05](https://user-images.githubusercontent.com/48589838/75035758-3eb4eb00-54d6-11ea-9905-f2e9293e2f88.jpg)
+![ss-converted-10](https://user-images.githubusercontent.com/48589838/75035766-41afdb80-54d6-11ea-8c81-e6ad263c399c.jpg)
+![ss-converted-11](https://user-images.githubusercontent.com/48589838/75035769-42487200-54d6-11ea-93ad-f7e0b2dabf6b.jpg)
+![ss-converted-12](https://user-images.githubusercontent.com/48589838/75035771-42e10880-54d6-11ea-9723-93442533edeb.jpg)
