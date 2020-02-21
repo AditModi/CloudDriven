@@ -1,4 +1,4 @@
-<div *ngIf="!fileUpload.name.endsWith('/') && fileUpload.name.split('/').length==level+1" class="jumbotron">
+<div *ngIf="!fileUpload.name.endsWith('/') && fileUpload.name.startsWith(parent) && fileUpload.name.split('/').length==level+1" class="jumbotron">
     <a href="{{fileUpload.url}}">{{fileUpload.name}}</a><br/><br/>
     <button (click)="copyText(fileUpload.url)" style="margin-right: 5px;"  class="btn btn-success">Share link</button>
     <button (click)="generateQR(fileUpload.url)" style="margin-right: 5px;"  class="btn btn-success">Share via QR-code</button>

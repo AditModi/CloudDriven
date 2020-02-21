@@ -18,7 +18,7 @@
         </div>
         <h5>Directories:</h5><br />
         <div *ngFor="let file of fileUploads | async">
-            <div class="panel-body" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 ">
+            <div class="panel-body" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 && file.name.startsWith(parent) ">
                 <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">
           {{file.name}}
           <br />
@@ -30,7 +30,7 @@
         <hr style="border-top:2px solid #0055ff;" />
         <h5>Files:</h5><br />
         <div *ngFor="let file of fileUploads | async">
-            <app-details-upload [level]='level' [fileUpload]='file'></app-details-upload>
+            <app-details-upload [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
 
         </div>
     </div>

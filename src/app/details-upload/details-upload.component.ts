@@ -12,7 +12,7 @@ export class DetailsUploadComponent implements OnInit {
   @Input() level;
   qr_url:string;
   qr_flag:boolean;
-
+  @Input() parent:string;
   constructor(private uploadService: FileUploadService) { }
    
   ngOnInit() {

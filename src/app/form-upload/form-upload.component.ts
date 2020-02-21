@@ -47,6 +47,7 @@ export class FormUploadComponent implements OnInit {
     for (let index = 0; index < event.length; index++) {
       const element = event[index];
       this.files.push(element)
+      console.log(element)
       
     }  
   }
@@ -59,5 +60,25 @@ export class FormUploadComponent implements OnInit {
     this.parent=msg
     //console.log("FromUpload: "+msg)
   }
+
+  filesPicked(files) {
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const path:Array<String> = file.webkitRelativePath.split('/');
+        //console.log(file)
+        
+        var fname=path.pop()
+        
+        
+        var uploadPath = this.parent+path.join('/')+'/';
+        console.log(i)
+        console.log("path :"+uploadPath)
+        console.log("File :"+fname)
+        
+      this.uploadService.CreateDiectory(uploadPath)
+      this.uploadService.uploadfile(file,uploadPath);
+    }
+}
+
 
 }
