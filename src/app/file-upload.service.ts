@@ -4,6 +4,7 @@ import * as S3 from 'aws-sdk/clients/s3';
 import {Observable} from 'rxjs';
 import {of} from 'rxjs'
 import { FileUpload } from './file-upload';
+import { Request, AWSError } from 'aws-sdk/global';
 
 //@Injectable({
   //providedIn: 'root'
@@ -20,7 +21,7 @@ export class FileUploadService {
     const bucket = new S3(
       {
         accessKeyId: 'XXX',
-        secretAccessKey: 'XXXX',
+        secretAccessKey: 'XXX',
         region: 'ap-south-1'
       }
     );
@@ -95,12 +96,31 @@ export class FileUploadService {
       Key: path,
       ACL: 'public-read'
     }
-
-    this.getS3Bucket().putObject(params, function (err, data) {
+    
+     this.getS3Bucket().putObject(params, function (err, data) {
       if (err) {
         console.log(err)
+        
       }
       else {
+        console.log(data)
+        
+      }
+    })
+    
+  }
+
+  DeleteDirectory(path:string){
+    const params = {
+      Bucket: this.BUCKET,
+      Key: path,
+      
+    }
+    this.getS3Bucket().deleteObject(params,function(err,data){
+      if(err){
+        console.log(err)
+      }
+      else{
         console.log(data)
       }
     })

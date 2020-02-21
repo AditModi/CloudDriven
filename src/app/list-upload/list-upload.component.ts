@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
+
+
 import { FileUpload } from '../file-upload';
 import { FileUploadService } from '../file-upload.service';
 import { int } from 'aws-sdk/clients/datapipeline';
@@ -29,6 +31,7 @@ export class ListUploadComponent implements OnInit {
 
   }
   traverse(file: FileUpload) {
+
     this.level = this.level + 1
     if (this.level == 1) {
       this.parent = this.uname + "/"
@@ -51,11 +54,11 @@ export class ListUploadComponent implements OnInit {
       temp.pop();
 
       this.parent = temp.join('/') + '/';
-      
+
       console.log("back:" + this.parent);
     }
-    else{
-      this.parent=undefined;
+    else {
+      this.parent = undefined;
     }
     this.childEvent.emit(this.parent)
   }
@@ -74,6 +77,37 @@ export class ListUploadComponent implements OnInit {
   createDirectory() {
     //console.log(this.dname)
     this.uploadService.CreateDiectory(this.parent + this.dname + "/")
+
   }
 
+  deleteDirectory(path) {
+    var c = 0;
+    //count number of items in directory
+    this.fileUploads.subscribe(data => data.forEach(function (val) {
+      if (val.name.startsWith(path) && val.name != path) {
+        c = c + 1;
+      }
+    }))
+    console.log(c)
+
+    if (c == 0) {
+      //Delete directory
+      this.uploadService.DeleteDirectory(path)
+
+      this.fileUploads.subscribe(data => {
+        var i = data.indexOf(path)
+        data.splice(i, 1);
+      })
+      //this.showFiles(true)
+    }
+
+
+
+    else {
+      alert("Only empty directories can be deleted")
+    }
+
+  }
 }
+
+

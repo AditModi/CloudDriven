@@ -11,20 +11,28 @@
 <div *ngIf="level>0" [hidden]="!showFile">
     <div class="panel panel-primary">
         <div *ngIf="level>0" class="panel-heading">
-            <br/>
+            <br />
             <button (click)="revTraverse()">back</button>
-            <br/>
+            <br />
             <h3>List of Files & directories</h3>
         </div>
         <h5>Directories:</h5><br />
         <div *ngFor="let file of fileUploads | async">
-            <div class="panel-body" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 && file.name.startsWith(parent) ">
+            <div  
+                *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 && file.name.startsWith(parent) ">
+                <!--First,third condition for directories-->
+                <!--Second condition for immediate children-->
                 <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)">
-          {{file.name}}
-          <br />
-        </button>
+                    {{file.name}}
 
+
+                </button>
+                <button (click)="deleteDirectory(file.name)" style="margin-left: 5px;">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+                
             </div>
+            
         </div>
         <br />
         <hr style="border-top:2px solid #0055ff;" />

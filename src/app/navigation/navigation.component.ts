@@ -25,7 +25,7 @@ export class NavigationComponent implements OnInit {
           console.log("You are successfully logged out");
           localStorage.removeItem('user')
           this.login.change(false)
-          this.router.navigate(["/"]);
+          
         })
         .catch(err => console.log(err));
     
