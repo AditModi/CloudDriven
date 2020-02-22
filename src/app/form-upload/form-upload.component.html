@@ -8,40 +8,61 @@
 
 
 
+
+
+
+
                 <div *ngIf="parent!=undefined" class="text-center">
-                    <h5 style="font-weight: 500;">Current Directory: {{ parent }} </h5>
+                    <h5 style="font-weight: 600;color: #004de6;font-size: 25px;text-shadow:2px 2px 2px #aaaaaa;margin-bottom: 20px;">Current Directory: {{ parent }} </h5>
                 </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6" style="background-color:#ccebff; border-radius: 1rem;">
+                            <p class="uploadlabel" *ngIf="parent!=undefined" style='margin-top:20px;margin-bottom:20px; text-align: center; color:#004de6; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>
+                                Upload Files</p>
 
-                <p class="uploadlabel" *ngIf="parent!=undefined"
-                    style='margin-bottom:20px; text-align: center; color:#1a1aff; font-size: 30px;text-shadow:2px 2px 2px #aaaaaa;'>
-                    Upload Files</p>
-                <div class="text-center" *ngIf="parent!=undefined">
-                    <input type="file" id="file" (change)="uploadFile($event.target.files)" multiple />
-                    <label for="file" class="btn-1">Select Files</label>
-                    <br/>
-                    <input id="folder" #folderInput type="file" (change)="filesPicked(folderInput.files)" webkitDirectory />
-                    <label for="folder" class="btn-1">Select Folder</label>
 
-                    <p style="font-size: 20px;font-weight: 500;">Or</p>
-                    <p style="font-size: 20px;font-weight: 500;">Drag Your Files Below:</p>
-                    <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop
-                        (onFileDropped)="uploadFile($event)">
-                        <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
-                    </div>
-                    <div class="files-list" *ngFor="let file of files;let i= index">
-                        <p> {{ file.name }} </p>
-                        <button class="delete-file" (click)="deleteAttachment(i)">
+                            <div class="text-center" *ngIf="parent!=undefined">
+                                <input type="file" id="file" (change)="uploadFile($event.target.files)" multiple />
+                                <label for="file" style="width:180px;height:50px;font-size:15px;border-radius: 1rem;" class="btn-1">Select Files</label>
+
+                                <br/>
+                                <input id="folder" #folderInput type="file" (change)="filesPicked(folderInput.files)" webkitDirectory />
+                                <label for="folder" style="width:200px;height:55px;font-size:15px;border-radius: 1rem;" class="btn-1">Select Folder</label>
+
+                                <p style="font-size: 20px;font-weight: 500;color:#004de6">Or</p>
+                                <p style="font-size: 20px;font-weight: 500;color:#004de6">Drag Your Files Below:</p>
+
+
+
+
+                                <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+                                    <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="text-center" *ngIf="parent!=undefined">
+                                <div class="files-list" *ngFor="let file of files;let i= index">
+                                    <p> {{ file.name }} </p>
+                                    <button class="delete-file" (click)="deleteAttachment(i)">
                             <img src="../../assets/Recycle_Bin_Full.png">
                         </button>
+                                </div>
+
+
+
+                                <!-- <button class="btn-2" [disabled]="!files" (click)="upload()">Upload Files</button> -->
+                            </div>
+
+                        </div>
                     </div>
-                    
-                    
+                    <app-list-upload (childEvent)="msgFromChild($event)"></app-list-upload>
 
-                    <!-- <button class="btn-2" [disabled]="!files" (click)="upload()">Upload Files</button> -->
+
+
                 </div>
-                <app-list-upload (childEvent)="msgFromChild($event)"></app-list-upload>
             </div>
-
         </div>
     </div>
     <div style="height: 50px;"></div>
