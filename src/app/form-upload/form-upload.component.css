@@ -362,7 +362,7 @@ nav a:hover:after {
 .uploadlabel {
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 30px;
 }
 
@@ -377,19 +377,17 @@ nav a:hover:after {
 }
 
 [type="file"]+label.btn-1 {
-    background-color: #0099ff;
-    box-shadow: 0 6px #008ae6;
+    background-color: #0080ff;
     -webkit-transition: none;
     transition: none;
 }
 
 [type="file"]+label.btn-1:hover {
-    box-shadow: 0 4px #008ae6;
-    top: 2px;
+    background-color: #0066cc;
 }
 
 [type="file"]+label {
-    background: #1a53ff;
+    background: #0080ff;
     border: none;
     border-radius: 60px;
     color: #fff;
@@ -397,7 +395,6 @@ nav a:hover:after {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    font-weight: 800;
     margin-bottom: 1rem;
     outline: none;
     padding: 1rem 50px;
@@ -408,7 +405,6 @@ nav a:hover:after {
 }
 
 .btn-2 {
-    box-shadow: 0 6px #0040ff;
     -webkit-transition: none;
     transition: none;
     background: #1a53ff;
@@ -419,7 +415,6 @@ nav a:hover:after {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    font-weight: 800;
     margin-bottom: 1rem;
     outline: none;
     padding: 1rem 50px;
@@ -429,16 +424,17 @@ nav a:hover:after {
     vertical-align: middle;
 }
 
-.btn-2:hover {
-    box-shadow: 0 4px #0040ff;
-    top: 2px;
+.btn-2:hover {}
+
+.uploadbutton:hover {
+    background-color: #0033cc;
 }
 
 .wrapper {
     background-color: #b3e0ff;
     border-radius: 1rem;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 1300px;
     padding: 2rem;
     width: 100%;
     z-index: 1;
@@ -500,4 +496,20 @@ nav a:hover:after {
 
 .files-list .delete-file img {
     width: 30px;
+}
+
+#progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 10px;
+    background-image: white;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, #33adff, #0099ff);
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }

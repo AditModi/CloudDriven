@@ -1,27 +1,12 @@
-# Sdpapp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Personal Digital Storage and Secure Sharing
+![ss-converted-07](https://user-images.githubusercontent.com/48589838/75035763-3fe61800-54d6-11ea-90ac-13ca31365641.jpg)
+![ss-converted-08](https://user-images.githubusercontent.com/48589838/75035764-407eae80-54d6-11ea-932b-986c212f58bf.jpg)
+![ss-converted-09](https://user-images.githubusercontent.com/48589838/75035765-41174500-54d6-11ea-8311-3793bc00ebd1.jpg)
+![ss-converted-01](https://user-images.githubusercontent.com/48589838/75035772-43799f00-54d6-11ea-9e59-832b4d9862dc.jpg)
+![ss-converted-02](https://user-images.githubusercontent.com/48589838/75035774-44123580-54d6-11ea-854d-815f0b8ff1a4.jpg)
+![ss-converted-03](https://user-images.githubusercontent.com/48589838/75035775-44aacc00-54d6-11ea-8533-385f38170db3.jpg)
+![ss-converted-04](https://user-images.githubusercontent.com/48589838/75035776-45436280-54d6-11ea-8deb-9605abb46e29.jpg)
+![ss-converted-05](https://user-images.githubusercontent.com/48589838/75035758-3eb4eb00-54d6-11ea-9905-f2e9293e2f88.jpg)
+![ss-converted-10](https://user-images.githubusercontent.com/48589838/75035766-41afdb80-54d6-11ea-8c81-e6ad263c399c.jpg)
+![ss-converted-11](https://user-images.githubusercontent.com/48589838/75035769-42487200-54d6-11ea-93ad-f7e0b2dabf6b.jpg)
+![ss-converted-12](https://user-images.githubusercontent.com/48589838/75035771-42e10880-54d6-11ea-9723-93442533edeb.jpg)

@@ -84,6 +84,7 @@ export class ListUploadComponent implements OnInit {
     var c = 0;
     //count number of items in directory
     this.fileUploads.subscribe(data => data.forEach(function (val) {
+      
       if (val.name.startsWith(path) && val.name != path) {
         c = c + 1;
       }

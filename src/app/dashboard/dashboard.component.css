@@ -22,7 +22,6 @@ nav {
 }
 
 .btn-2 {
-    box-shadow: 0 6px #0040ff;
     -webkit-transition: none;
     transition: none;
     background: #1a53ff;
@@ -33,7 +32,6 @@ nav {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    font-weight: 800;
     margin-bottom: 1rem;
     outline: none;
     padding: 1rem 50px;
@@ -41,11 +39,13 @@ nav {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     vertical-align: middle;
+    padding: 0;
 }
 
-.btn-2:hover {
-    box-shadow: 0 4px #0040ff;
-    top: 2px;
+.btn-2:hover {}
+
+.uploadbutton:hover {
+    background-color: #0033cc;
 }
 
 .wrapper {
@@ -70,4 +70,38 @@ nav {
 
 .uploadlink:hover {
     font-size: 25px;
+}
+
+[type="file"] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+[type="file"]+label.btn-1 {
+    background-color: #0080ff;
+    -webkit-transition: none;
+    transition: none;
+}
+
+[type="file"]+label.btn-1:hover {
+    background-color: #0066cc;
+}
+
+[type="file"]+label {
+    background: #0080ff;
+    border: none;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 0.6rem 30px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
 }

@@ -1,0 +1,170 @@
+.all {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background: #f3f3f3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.nav-brand p {
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+.btn-2 {
+    -webkit-transition: none;
+    transition: none;
+    background: #1a53ff;
+    border: none;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.uploadbutton:hover {
+    background-color: #0033cc;
+}
+
+.wrapper {
+    background-color: #b3e0ff;
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 2rem;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 8px 8px 5px #aaaaaa;
+}
+
+.wrapper:hover {
+    box-shadow: 17px 17px 5px #aaaaaa;
+}
+
+.wrapperhead {
+    height: 560px;
+    z-index: 0px;
+}
+
+.uploadlink:hover {
+    font-size: 25px;
+}
+
+[type="file"] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+[type="file"]+label.btn-1 {
+    background-color: #0080ff;
+    -webkit-transition: none;
+    transition: none;
+}
+
+[type="file"]+label.btn-1:hover {
+    background-color: #0066cc;
+}
+
+[type="file"]+label {
+    background: #0080ff;
+    border: none;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 0.6rem 30px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
+}
+
+p {
+    font-family: Lato;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.hoverable {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    border: 5px solid #000;
+    border-radius: 50%;
+}
+
+.hoverable .hover-text {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.hoverable .background {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hoverable:hover .hover-text {
+    display: block;
+}
+
+.hoverable:hover .background {
+    display: block;
+}
+
+#fileInput {
+    display: none;
+}
+
+.info {
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+th {
+    color: #0066ff;
+    text-shadow: 2px 2px 3px #aaaaaa;
+}

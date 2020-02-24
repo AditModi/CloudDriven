@@ -15,6 +15,10 @@ import {FormsModule} from '@angular/forms';
 import { DragDropDirective } from './drag-drop.directive';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { LoginService } from './login.service';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -26,14 +30,18 @@ import { LoginService } from './login.service';
     DashboardComponent,
     HomeComponent,
     NavigationComponent,
-    DragDropDirective
+    DragDropDirective,
+    UserProfileComponent,
+    MatProgressSpinner,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClipboardModule,
     FormsModule,
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    BrowserAnimationsModule
   ],
   providers: [FileUploadService,LoginService],
   bootstrap: [AppComponent]
