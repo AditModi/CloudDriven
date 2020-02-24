@@ -6,9 +6,10 @@
 <div *ngIf="level==0" class="panel-heading">
     <b style="color:#004de6; font-size: 25px;text-shadow:2px 2px 2px #aaaaaa;">Root directory</b><br />
     <p style="color:#004de6;"><i>In this directory you can securely store your all files.</i></p>
-    <button style="text-decoration: underline;cursor: pointer; " (click)="traverse(file) ">{{ uname  }}</button>
+    <button style="text-decoration: underline;cursor: pointer; " (click)="traverse(file)">{{ uname  }}</button>
 </div>
 <div *ngIf="level>0" [hidden]="!showFile">
+
     <div class="panel panel-primary">
         <div *ngIf="level>0" class="panel-heading">
             <br />
@@ -18,7 +19,9 @@
             <br />
             <h3 style="color: #004de6;text-shadow:2px 2px 2px #aaaaaa; ;">List of Files & directories</h3>
         </div>
+
         <h5 style="color:#004de6">Directories:</h5><br />
+
         <div *ngFor="let file of fileUploads | async">
             <div *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 && file.name.startsWith(parent) ">
                 <!--First,third condition for directories-->
@@ -38,7 +41,7 @@
         <br />
         <hr style="border-top:2px solid #0055ff;" />
         <h5 style="color:#004de6">Files:</h5><br />
-        <div *ngFor="let file of fileUploads | async">
+        <div style="display: inline-block;margin-right: 20px;" *ngFor="let file of fileUploads | async">
             <app-details-upload [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
 
         </div>

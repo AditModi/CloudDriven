@@ -23,12 +23,13 @@
 
 
                             <div class="text-center" *ngIf="parent!=undefined">
-                                <input type="file" id="file" (change)="uploadFile($event.target.files)" multiple />
-                                <label for="file" style="width:180px;height:50px;font-size:15px;border-radius: 1rem;" class="btn-1">Select Files</label>
 
-                                <br/>
+                                <input type="file" id="file" (change)="uploadFile($event.target.files)" multiple />
+                                <label for="file" style="width:180px;height:50px;font-size:15px;border-radius: 1rem;margin-right: 10px;" class="btn-1">Select Files</label>
+
+
                                 <input id="folder" #folderInput type="file" (change)="filesPicked(folderInput.files)" webkitDirectory />
-                                <label for="folder" style="width:200px;height:55px;font-size:15px;border-radius: 1rem;" class="btn-1">Select Folder</label>
+                                <label for="folder" style="width:200px;height:50px;font-size:15px;border-radius: 1rem;" class="btn-1">Select Folder</label>
 
                                 <p style="font-size: 20px;font-weight: 500;color:#004de6">Or</p>
                                 <p style="font-size: 20px;font-weight: 500;color:#004de6">Drag Your Files Below:</p>
@@ -38,7 +39,12 @@
 
                                 <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
                                     <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+
                                 </div>
+
+                                <button class="btn-2 uploadbutton" style="width:180px;height:50px;font-size:15px;border-radius: 1rem;" [disabled]="!files" (click)="upload()">Upload</button>
+
+
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -52,7 +58,7 @@
 
 
 
-                                <!-- <button class="btn-2" [disabled]="!files" (click)="upload()">Upload Files</button> -->
+
                             </div>
 
                         </div>

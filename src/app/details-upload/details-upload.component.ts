@@ -14,7 +14,7 @@ export class DetailsUploadComponent implements OnInit {
   qr_flag:boolean;
   @Input() parent:string;
   constructor(private uploadService: FileUploadService) { }
-   
+
   ngOnInit() {
     this.qr_flag=false
   }
@@ -42,6 +42,9 @@ export class DetailsUploadComponent implements OnInit {
     generateQR(link:string){
       this.qr_flag=true
       this.qr_url=link
+    }
+    toggleQrFlag(){
+      this.qr_flag=false
     }
 
 }

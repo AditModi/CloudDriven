@@ -426,6 +426,10 @@ nav a:hover:after {
 
 .btn-2:hover {}
 
+.uploadbutton:hover {
+    background-color: #0033cc;
+}
+
 .wrapper {
     background-color: #b3e0ff;
     border-radius: 1rem;
