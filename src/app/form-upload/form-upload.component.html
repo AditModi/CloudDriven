@@ -1,9 +1,9 @@
 <div style="background-color:#EBF7FB; width: 100%; height: 100vh; overflow:auto; ">
-    <div style="height:100px;"></div>
+    <div style="height:80px;"></div>
     <div>
 
         <!-- just to make scrolling effect possible -->
-        <div class="wrapperhead" style="padding-top: 50px;">
+        <div class="wrapperhead" style="padding-top: 10px;">
             <div class="wrapper">
 
 
@@ -43,6 +43,9 @@
                                 </div>
 
                                 <button class="btn-2 uploadbutton" style="width:180px;height:50px;font-size:15px;border-radius: 1rem;" [disabled]="!files" (click)="upload()">Upload</button>
+                                <br/>
+
+                                <progress *ngIf="flag==1" id="progress" value="10"></progress>
 
 
                             </div>
