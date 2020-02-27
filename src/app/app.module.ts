@@ -19,6 +19,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import { StorageService } from './storage.service';
 
 @NgModule({
   declarations: [

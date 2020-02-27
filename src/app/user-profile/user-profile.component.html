@@ -29,10 +29,14 @@
                         <th>{{uname}}</th>
                     </tr>
                     <tr>
-                        <th>Used Space : </th>
+                        <th *ngIf="!sflag" ><button (click)="calculateSpace()" class="btn btn-primary">Show Storage</button></th>
+                        <th *ngIf="sflag" ><button (click)="sflag=false" class="btn btn-primary">Hide Storage</button></th>
+                    </tr>
+                    <tr *ngIf="sflag">
+                        <th>Used Space : {{ space/1000  }} KB</th>
                         <th></th>
                     </tr>
-                    <tr>
+                    <tr *ngIf="sflag">
                         <th>Free Space : </th>
                         <th></th>
                     </tr>
