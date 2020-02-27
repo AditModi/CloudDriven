@@ -16,12 +16,12 @@
 
 
             <ul>
-                <li><a routerLink="">home</a></li>
-                <li><a routerLink="">contact</a></li>
-                <li><a routerLink="/dashboard">Dashboard</a></li>
-                <li *ngIf="logFlag"><a routerLink="/user-profile">Profile</a></li>
-                <li *ngIf="!logFlag"><a routerLink="/login">login</a></li>
-                <li *ngIf="logFlag"><a href="#" (click)="logout()">logout</a></li>
+                <li><a routerLink="" style="font-size: 15px;">home</a></li>
+                <li><a routerLink="" style="font-size: 15px;">contact</a></li>
+                <li><a routerLink="/dashboard" style="font-size: 15px;">Dashboard</a></li>
+                <li *ngIf="logFlag"><a style="font-size: 15px;" routerLink="/user-profile">Profile</a></li>
+                <li *ngIf="!logFlag"><a style="font-size: 15px;" routerLink="/login">login</a></li>
+                <li *ngIf="logFlag"><a style="font-size: 15px;" href="#" (click)="logout()">logout</a></li>
 
 
             </ul>

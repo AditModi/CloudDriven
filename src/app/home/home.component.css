@@ -1,47 +1,29 @@
     @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-    html,
-    body {}
-
-    header {
-        padding: 2px 0;
-        background: rgb(8, 188, 243);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
-        position: fixed;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .container {
-        padding: 0 20px;
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
     .logo-box {
         float: left;
         margin-right: 20px;
     }
-
+    
     .logo-box a {
         outline: none;
         display: block;
     }
-
+    
     .logo-box img {
         display: block;
     }
-
+    
     nav {
         overflow: hidden;
     }
-
+    
     nav ul {
         list-style: none;
         margin: 0;
         padding: 0;
         float: right;
     }
-
+    
     nav li {
         display: inline-block;
         margin-left: 25px;
@@ -49,7 +31,7 @@
         line-height: 70px;
         transition: .5s linear;
     }
-
+    
     nav a {
         text-decoration: none;
         display: block;
@@ -57,7 +39,7 @@
         color: white;
         text-transform: uppercase;
     }
-
+    
     nav a:after {
         content: "";
         width: 0;
@@ -68,11 +50,11 @@
         background: white;
         transition: width .5s linear;
     }
-
+    
     nav a:hover:after {
         width: 100%;
     }
-
+    
     @media screen and (max-width: 660px) {
         header {
             text-align: center;
@@ -90,7 +72,7 @@
             margin-left: 0;
         }
     }
-
+    
     @media screen and (max-width: 550px) {
         nav {
             overflow: visible;
@@ -109,7 +91,7 @@
         }
     }
     /* Home section */
-
+    
     .home {
         width: 100%;
         height: 100vh;
@@ -120,7 +102,7 @@
         background-size: cover;
         background-color: white;
     }
-
+    
     @media (max-width: 500px) {
         .navbar-toggleable-sm {
             clear: both;
@@ -128,11 +110,11 @@
     }
     /* Animation */
     /* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
-
+    
     .login-a {
         font-size: 2.6rem;
     }
-
+    
     .content {
         position: absolute;
         top: 50%;
@@ -147,26 +129,26 @@
         color: #ecf0f1;
         margin-top: 50px;
     }
-
+    
     .content__container {
         font-weight: 600;
         overflow: hidden;
         height: 40px;
         padding: 0 40px;
     }
-
+    
     .content__container:before {
         content: '<';
         left: 0;
         padding-right: 10px;
     }
-
+    
     .content__container:after {
         content: '>';
         position: absolute;
         right: 0;
     }
-
+    
     .content__container:after,
     .content__container:before {
         position: absolute;
@@ -181,7 +163,7 @@
         animation-duration: 2s;
         animation-iteration-count: infinite;
     }
-
+    
     .content__container__text {
         display: inline;
         float: left;
@@ -189,7 +171,7 @@
         text-shadow: 3px 3px 4px #80ccff;
         color: #008ae6;
     }
-
+    
     .platform {
         position: absolute;
         top: 57%;
@@ -205,7 +187,7 @@
         text-shadow: 3px 3px 4px #80ccff;
         margin-top: 50px;
     }
-
+    
     .content__container__list {
         margin-top: 0;
         padding-left: 170px;
@@ -220,12 +202,12 @@
         color: #007acc;
         text-shadow: 3px 3px 4px #80ccff;
     }
-
+    
     .content__container__list__item {
         line-height: 40px;
         margin: 0;
     }
-
+    
     @-webkit-keyframes opacity {
         0%,
         100% {
@@ -235,7 +217,7 @@
             opacity: 1;
         }
     }
-
+    
     @-webkit-keyframes change {
         0%,
         12.66%,
@@ -269,7 +251,7 @@
             transform: translate3d(0, -25%, 0);
         }
     }
-
+    
     @keyframes opacity {
         0%,
         100% {
@@ -279,7 +261,7 @@
             opacity: 1;
         }
     }
-
+    
     @keyframes change {
         0%,
         12.66%,
@@ -313,7 +295,7 @@
             transform: translate3d(0, -25%, 0);
         }
     }
-
+    
     @media screen and (max-width:768px) {
         .navTrigger {
             display: block;
@@ -361,32 +343,32 @@
             display: block;
         }
     }
-
+    
     .uploadlabel {
         text-decoration: none;
         font-family: 'Lato', sans-serif;
         font-weight: 1000;
         text-shadow: 2px 2px 4px cyan;
     }
-
+    
     [type="file"] {
         height: 0;
         overflow: hidden;
         width: 0;
     }
-
+    
     [type="file"]+label.btn-1 {
         background-color: #f79159;
         box-shadow: 0 6px #f57128;
         -webkit-transition: none;
         transition: none;
     }
-
+    
     [type="file"]+label.btn-1:hover {
         box-shadow: 0 4px #f57128;
         top: 2px;
     }
-
+    
     [type="file"]+label {
         background: #f15d22;
         border: none;
@@ -405,7 +387,7 @@
         transition: all 0.3s;
         vertical-align: middle;
     }
-
+    
     .btn-2 {
         background-color: #f79159;
         box-shadow: 0 6px #f57128;
@@ -428,12 +410,12 @@
         transition: all 0.3s;
         vertical-align: middle;
     }
-
+    
     .btn-2:hover {
         box-shadow: 0 4px #f57128;
         top: 2px;
     }
-
+    
     .wrapper {
         background-color: #fff;
         border-radius: 1rem;
@@ -444,18 +426,18 @@
         z-index: 1;
         box-shadow: 2px 2px 8px 10px cyan;
     }
-
+    
     .wrapperhead {
         height: 560px;
         z-index: 0px;
         background: url("https://benmarshall.me/wp-content/uploads/2018/08/background.gif");
         padding: 4rem;
     }
-
+    
     .footer {
         background-color: #008ae6;
     }
-
+    
     .videodiv {
         background-color: #008ae6;
     }
