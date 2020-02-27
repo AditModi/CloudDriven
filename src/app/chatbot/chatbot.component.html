@@ -1,0 +1,8 @@
+<h1>Chat Bot</h1>
+<ng-container *ngFor="let message of messages">
+<div>
+{{message.sender}}: {{message.content}}
+</div>
+</ng-container>
+<input [(ngModel)]="userInput"(keyup.enter)=postLexText>
+<button title="Post Lex Text Button" (click)="postLexText()"> Post Text </button>
