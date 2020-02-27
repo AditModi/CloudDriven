@@ -126,4 +126,30 @@ export class FileUploadService {
     })
   }
 
+  getProfile():Observable<Array<FileUpload>>{
+    const fileUploads = new Array<FileUpload>();
+    //var FOLDER= localStorage.getItem('user') + "/"
+    const params = {
+      Bucket: this.BUCKET,
+      Prefix: "Profile/"+localStorage.getItem('user')+"/"
+    };
+
+    this.getS3Bucket().listObjects(params, function (err, data) {
+      if (err) {
+        console.log('There was an error getting your files: ' + err);
+        return;
+      }
+
+      console.log('Successfully get files.', data);
+
+      const fileDatas = data.Contents;
+
+      fileDatas.forEach(function (file) {
+        fileUploads.push(new FileUpload(file.Key, 'https://mysdpproject.s3.amazonaws.com/' +  file.Key,file.Size));
+      });
+    });
+
+    return of(fileUploads);
+  }
+
 }

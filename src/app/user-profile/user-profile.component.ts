@@ -11,48 +11,81 @@ import { Observable } from 'rxjs';
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.css'],
-  providers:[StorageService]
+  providers: [StorageService]
 })
 export class UserProfileComponent implements OnInit {
   url = '';
+  dp:FileUpload;
   space;
   sflag
-  uname:string="";
+  uname: string = "";
+  picflag=false
   fileUploads: Observable<Array<FileUpload>>;
-  constructor(private router: Router,private logservice:LoginService,private uploadService:FileUploadService) { }
-  user:any;
+  profile: Array<FileUpload>;
+  constructor(private router: Router, private logservice: LoginService, private uploadService: FileUploadService) { }
+  user: any;
+  pic;
   ngOnInit() {
-    this.uname=localStorage.getItem('user')
+    this.uname = localStorage.getItem('user')
     //this.space=this.storageService.calculateSpace()
     //this.storageService.UsedSpace.subscribe(data=>this.space=data);
-    this.sflag=false
-    this.fileUploads=this.uploadService.getFiles()
+    this.sflag = false
+    this.fileUploads = this.uploadService.getFiles()
+    this.uploadService.getProfile().subscribe(data=>{
+      this.profile=data
+    })
+    console.log(this.profile)
+    
+    //this.getPhoto()
+    
   }
 
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
-
+      this.pic = event.target.files[0];
+      this.picflag=true
       reader.readAsDataURL(event.target.files[0]); // read file as data url
 
-      reader.onload = (event:any) => { // called once readAsDataURL is completed
+      reader.onload = (event: any) => { // called once readAsDataURL is completed
         this.url = event.target.result;
       }
     }
   }
-  public delete(){
+  public delete() {
     this.url = null;
+    this.picflag=false
   }
 
-  calculateSpace(){
-    var s=0
-    this.fileUploads.subscribe(data=>data.forEach(function(val){
+  calculateSpace() {
+    var s = 0
+    this.fileUploads.subscribe(data => data.forEach(function (val) {
       //console.log(val)
-      s= s+val.size
+      s = s + val.size
     }))
-    this.space=s
-    this.sflag=true;
+    this.space = s
+    this.sflag = true;
+
+  }
+
+  getPhoto() {
+    var files: FileUpload[];
+    //this.profile.subscribe(data => {
+    //files=data
     
+  //})
+}
+
+  upload() {
+
+    //console.log(file)
+    this.uploadService.deleteFile(this.profile[1])
+    if (this.pic) {
+      
+      this.uploadService.uploadfile(this.pic, "Profile/" + this.uname + "/");
+      this.picflag=false
+      console.log("updated profile pic")
+    }
   }
 
 }
