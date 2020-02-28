@@ -1,7 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable, forkJoin } from 'rxjs';
 
-
+import * as JSZip from 'jszip'
+import * as JSZipUtils from 'jszip-utils'
+import { saveAs } from 'file-saver';
 import { FileUpload } from '../file-upload';
 import { FileUploadService } from '../file-upload.service';
 import { int } from 'aws-sdk/clients/datapipeline';
@@ -84,7 +86,7 @@ export class ListUploadComponent implements OnInit {
     var c = 0;
     //count number of items in directory
     this.fileUploads.subscribe(data => data.forEach(function (val) {
-      
+
       if (val.name.startsWith(path) && val.name != path) {
         c = c + 1;
       }
@@ -108,6 +110,37 @@ export class ListUploadComponent implements OnInit {
       alert("Only empty directories can be deleted")
     }
 
+  }
+
+  download(path:string) {
+    var zip = new JSZip()
+    var count = 0
+    var t=path.split('/')
+    t.pop()
+    var zipName = t.pop();
+    var files: Array<FileUpload> = []
+    this.fileUploads.subscribe(data => data.forEach(function (val) {
+      if (val.name.startsWith(path) && !val.name.endsWith('/')) {
+        files.push(val)
+      }
+    })
+    )
+    files.forEach(function (val) {
+      var filename = val.name.split('/').pop()
+      JSZipUtils.getBinaryContent(val.url, function (err, data) {
+        if (err) {
+          throw err; // or handle the error
+        }
+        zip.file(filename, data, { binary: true });
+        count++;
+        if (count == files.length) {
+          zip.generateAsync({ type: 'blob' }).then(function (content) {
+            saveAs(content, zipName);
+          })
+
+        }
+      })
+    })
   }
 }
 
