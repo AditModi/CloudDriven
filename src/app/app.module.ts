@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import { StorageService } from './storage.service';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { StorageService } from './storage.service';
     DragDropDirective,
     UserProfileComponent,
     MatProgressSpinner,
+    ChatbotComponent,
 
   ],
   imports: [
