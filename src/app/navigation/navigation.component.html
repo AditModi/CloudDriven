@@ -19,6 +19,7 @@
                 <li><a routerLink="">home</a></li>
                 <li><a routerLink="/chatbot">contact</a></li>
                 <li><a routerLink="/dashboard">Dashboard</a></li>
+                <li><a routerLink="/notes" routerLinkActive="true">Notes</a></li>
                 <li *ngIf="logFlag"><a routerLink="/user-profile">Profile</a></li>
                 <li *ngIf="!logFlag"><a routerLink="/login">login</a></li>
                 <li *ngIf="logFlag"><a href="#" (click)="logout()">logout</a></li>

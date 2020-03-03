@@ -17,10 +17,12 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { LoginService } from './login.service';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {HttpClientModule} from '@angular/common/http'
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import { StorageService } from './storage.service';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { NotesComponent } from './notes/notes.component';
+import { NotesService } from './notes.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     UserProfileComponent,
     MatProgressSpinner,
     ChatbotComponent,
+    NotesComponent,
 
   ],
   imports: [
@@ -44,9 +47,10 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     ClipboardModule,
     FormsModule,
     NgxQRCodeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [FileUploadService,LoginService],
+  providers: [FileUploadService,LoginService,NotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
