@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl : "http://localhost:3000/api"
+  apiBaseUrl : "https://fathomless-beach-22281.herokuapp.com/api"
 };
 
 /*
