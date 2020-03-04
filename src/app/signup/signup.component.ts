@@ -73,7 +73,8 @@ export class SignupComponent implements OnInit {
         console.log(data)
         this.toVerifyEmail = false;
         this.signstatus = 'signin'
-        this.CreateDiectory()
+        this.uploadService.CreateDiectory(this.userName+"/")
+        this.uploadService.CreateDiectory("Profile/"+this.userName+'/')
 
       })
         .catch(err => console.log(err));

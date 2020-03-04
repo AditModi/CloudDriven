@@ -9,7 +9,7 @@
 
             <h5 class="text-center" style="color:#004de6 ;font-weight: 600;font-size: 25px;">Welcome, {{ uname }}</h5>
             <div class="text-center" style="margin-top:10px ;margin-bottom: 10px;">
-                <img style="width: 200px; border-radius: 50%;" src='https://www.w3schools.com/howto/img_avatar.png'>
+                <img style="width: 200px; border-radius: 50%;" [src]="profile[1] ? profile[1].url : 'https://www.w3schools.com/howto/img_avatar.png'">
 
             </div>
 

@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiBaseUrl : "https://fathomless-beach-22281.herokuapp.com/api"
 };
 
 /*

@@ -5,7 +5,8 @@ import { SignupComponent } from './signup/signup.component';
 import { FormUploadComponent } from './form-upload/form-upload.component';
 import { HomeComponent } from './home/home.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-
+import {ChatbotComponent} from 'src/app/chatbot/chatbot.component';
+import { NotesComponent } from './notes/notes.component';
 
 const routes: Routes = [
    {path:'',redirectTo:'home',pathMatch:'full'},
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path:'upload',component:FormUploadComponent},
   {path:'login',component:SignupComponent},
   {path:'dashboard',component:DashboardComponent},
-  {path:'user-profile',component:UserProfileComponent}
+  {path:'user-profile',component:UserProfileComponent},
+  {path:'chatbot',component:ChatbotComponent},
+  {path:'notes',component:NotesComponent}  
 ];
 
 @NgModule({

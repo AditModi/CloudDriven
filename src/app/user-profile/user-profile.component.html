@@ -8,9 +8,12 @@
             </div>
             <div class="text-center" style="margin-left:165px;">
                 <label class="hoverable text-center" for="fileInput">
-
-              <img [src]="url ? url : 'https://www.w3schools.com/howto/img_avatar.png'" >
-
+            
+              <img *ngIf="!picflag" [src]="profile[1] ? profile[1].url : 'https://www.w3schools.com/howto/img_avatar.png'" >
+              <!-- <div *ngFor="let p of profile | async">
+                <img *ngIf="!(p.name.endsWith('/'))"  [src]="p.url" >
+              </div>  -->
+              <img *ngIf="picflag" [src]='url'>
               <div class="hover-text">Choose an Image</div>
               <div class="background"></div>
             </label>
@@ -20,7 +23,7 @@
                 <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
                 <button *ngIf="url" class="btn-2 uploadbutton" style="width: 140px;height: 40px;" (click)="delete()">Delete</button>
 
-                <button *ngIf="url" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
+                <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
             </div>
             <div class="container">
                 <table align="center" style="font-size: 25px;">

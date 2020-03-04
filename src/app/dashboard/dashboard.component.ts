@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { Auth } from "aws-amplify";
 import { LoginService } from '../login.service';
+import { FileUploadService } from '../file-upload.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,8 @@ export class DashboardComponent implements OnInit {
 
 
   uname:string="";
-  constructor(private router: Router,private logservice:LoginService) {}
+  profile;
+  constructor(private router: Router,private logservice:LoginService,private uploadService:FileUploadService) {}
   user:any;
   ngOnInit() {
     // if( Auth.currentSession()==null ){
@@ -28,6 +30,9 @@ export class DashboardComponent implements OnInit {
       alert("You are not logged in")
       this.router.navigate(['login'])
     }
+    this.uploadService.getProfile().subscribe(data=>{
+      this.profile=data
+    })
 
   }
 
