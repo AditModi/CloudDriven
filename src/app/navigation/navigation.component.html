@@ -16,6 +16,14 @@
 
 
             <ul>
+<<<<<<< HEAD
+                <li><a routerLink="" style="font-size: 15px;">home</a></li>
+                <li><a routerLink="" style="font-size: 15px;">contact</a></li>
+                <li><a routerLink="/dashboard" style="font-size: 15px;">Dashboard</a></li>
+                <li *ngIf="logFlag"><a style="font-size: 15px;" routerLink="/user-profile">Profile</a></li>
+                <li *ngIf="!logFlag"><a style="font-size: 15px;" routerLink="/login">login</a></li>
+                <li *ngIf="logFlag"><a style="font-size: 15px;" href="#" (click)="logout()">logout</a></li>
+=======
                 <li><a routerLink="">home</a></li>
                 <li><a routerLink="/chatbot">contact</a></li>
                 <li><a routerLink="/dashboard">Dashboard</a></li>
@@ -24,6 +32,7 @@
                 <li *ngIf="logFlag"><a routerLink="/user-profile">Profile</a></li>
                 <li *ngIf="!logFlag"><a routerLink="/login">login</a></li>
                 <li *ngIf="logFlag"><a href="#" (click)="logout()">logout</a></li>
+>>>>>>> ec30e65603683eb558d6233ba9174eb3a63f8c95
 
 
             </ul>
