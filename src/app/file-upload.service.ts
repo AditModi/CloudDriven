@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {of} from 'rxjs'
 import { FileUpload } from './file-upload';
 import { Request, AWSError } from 'aws-sdk/global';
+import { Shared } from './shared';
 
 //@Injectable({
   //providedIn: 'root'
@@ -20,8 +21,8 @@ export class FileUploadService {
   getS3Bucket(): S3 {
     const bucket = new S3(
       {
-        accessKeyId: 'XXX',
-        secretAccessKey: 'XXX',
+        accessKeyId: 'AKIA3LQVK65OS7TBQLPZ',
+        secretAccessKey: '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',
         region: 'ap-south-1'
       }
     );
@@ -151,5 +152,47 @@ export class FileUploadService {
 
     return of(fileUploads);
   }
+
+  getSharedAll(list:Shared[]):Observable<Array<FileUpload[]>>{
+    var fList:Array<FileUpload[]>=[]
+    var final:FileUpload[]=[]
+    for(var i=0;i<list.length;i++){
+      fList.push(this.getShared(list[i].folder.name))
+      // console.log(fList[i])
+      // for(let j of fList[i]){
+      //   //final.push(fList[i][j])
+      //   console.log(j)
+      // } 
+    }
+    
+    return of(fList)
+  }
+
+  getShared(pre:string):Array<FileUpload>{
+    const fileUploads = new Array<FileUpload>();
+    var FOLDER= pre
+    const params = {
+      Bucket: this.BUCKET,
+      Prefix: FOLDER
+    };
+
+    this.getS3Bucket().listObjects(params, function (err, data) {
+      if (err) {
+        console.log('There was an error getting your files: ' + err);
+        return;
+      }
+
+      console.log('Successfully get files.', data);
+
+      const fileDatas = data.Contents;
+
+      fileDatas.forEach(function (file) {
+        fileUploads.push(new FileUpload(file.Key, 'https://mysdpproject.s3.amazonaws.com/' +  file.Key,file.Size));
+      });
+    });
+
+    return fileUploads;
+  }
+  
 
 }

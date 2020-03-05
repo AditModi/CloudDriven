@@ -1,4 +1,4 @@
-<div style="width:370px;background-color:#ccebff; border-radius: 1rem;" *ngIf="!fileUpload.name.endsWith('/') && fileUpload.name.startsWith(parent) && fileUpload.name.split('/').length==level+1" class="jumbotron">
+<div  style="width:370px;background-color:#ccebff; border-radius: 1rem;" *ngIf="(!fileUpload.name.endsWith('/') && fileUpload.name.startsWith(parent)) && (shared || fileUpload.name.split('/').length==level+1)" class="jumbotron">
     <!--First,third condition for files-->
     <!--Second condition for immediate children-->
 
@@ -7,7 +7,7 @@
         <a href="{{fileUpload.url}}">{{fileUpload.name}} ({{fileUpload.size / 1000}} KB)</a><br/><br/>
         <button (click)="copyText(fileUpload.url)" style="margin-right: 10px;" class="btn btn-success">Share link</button>
         <button (click)="generateQR(fileUpload.url)" style="width: 200px;" class="btn btn-success">Share via QR-code</button>
-        <button (click)='delete(fileUpload)' style="margin-top:10px;margin-bottom: 10px;" class="btn btn-danger">Delete</button>
+        <button *ngIf="!shared" (click)='delete(fileUpload)' style="margin-top:10px;margin-bottom: 10px;" class="btn btn-danger">Delete</button>
         <br/>
         <button *ngIf="qr_flag" (click)="toggleQrFlag()" style="float: left;" class="close" aria-label="Close">
           <span aria-hidden="true" style="color: red;">&times;</span>

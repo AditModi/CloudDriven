@@ -23,6 +23,10 @@ import { StorageService } from './storage.service';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { NotesComponent } from './notes/notes.component';
 import { NotesService } from './notes.service';
+import {SharedService} from './shared.service'
+import { SharedComponent } from './shared/shared.component';
+import { SharedListComponent } from './shared-list/shared-list.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +43,8 @@ import { NotesService } from './notes.service';
     MatProgressSpinner,
     ChatbotComponent,
     NotesComponent,
-
+    SharedComponent,
+    SharedListComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,7 @@ import { NotesService } from './notes.service';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [FileUploadService,LoginService,NotesService],
+  providers: [FileUploadService,LoginService,NotesService,SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

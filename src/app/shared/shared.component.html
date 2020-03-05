@@ -1,0 +1,39 @@
+<div>
+    <h2 style="padding-top: 3em;">My folders</h2>
+    <hr style="border-top:2px solid #0055ff;" />
+    <div *ngFor="let f of folders">
+        <ng-container *ngIf="f.folder.name.startsWith(uname)">
+            <p>Folder name : {{f.folder.name}} <button (click)="remove(f)" >Disable sharing</button></p>
+            <p>Shared with:</p>
+            <p *ngFor="let user of f.users">
+                {{user}}
+                <button (click)="removeUser(f,user)" >Remove</button>
+            </p>
+            <input type="text" [(ngModel)]="user" placeholder="Username">
+            <button (click)="addUser(f)" >Add new user</button>
+            <hr style="border-top:2px solid #0055ff;" />
+        <br/>
+        </ng-container>
+    </div>
+    <button (click)="newShare()" class="btn btn-primary">Share new folder</button>
+    <br/>
+    <div *ngIf="new">
+        Select folder
+        <p *ngFor="let e of list">
+            <button (click)="select(e)" >{{e.name}}</button>
+        </p>
+        
+    </div>
+    <div *ngIf="selectFlag">
+        <button>{{ selected.folder.name }}</button><br/>
+        <label for="users" >Enter users you want to share with(user1,user2,...)</label>
+        <input id='users' [(ngModel)]="users" placeholder="Usernames" type="text" >
+        <button (click)="share()" >Share</button>
+    </div>
+    <br/>
+
+
+    <button (click)="showShared()">Shared with me</button>
+    <br/>
+    <app-shared-list *ngIf="show" [list]="shared" ></app-shared-list>
+</div>

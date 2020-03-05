@@ -4,9 +4,10 @@ import { Observable } from 'rxjs';
 import { Shared } from './shared';
 import { environment } from 'src/environments/environment';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(//{
+  //providedIn: 'root'
+//}
+)
 export class SharedService {
 
   constructor(private http:HttpClient) { }
@@ -19,7 +20,13 @@ export class SharedService {
     return this.http.post<Shared>(environment.apiBaseUrl+"/folders",folder)
   }
 
-  update(folder):Observable<Shared>{
-    return this.http.put<Shared>(environment.apiBaseUrl+"/folder/",folder)
+  update(folder:Shared):Observable<Shared>{
+    console.log("Update "+folder.users)
+    return this.http.put<Shared>(environment.apiBaseUrl+"/folder/"+folder._id,folder)
+  }
+
+  delete(folder:Shared):Observable<Shared>{
+    console.log("Delete "+folder.folder.name)
+    return this.http.delete<Shared>(environment.apiBaseUrl+"/folder/"+folder._id)
   }
 }

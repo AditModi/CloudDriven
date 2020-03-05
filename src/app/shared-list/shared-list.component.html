@@ -1,0 +1,16 @@
+<hr style="border-top:2px solid #0055ff;" />
+<!-- <button *ngIf="level>1" class="button1 btn-info" style="width:120px;height:36px;font-size:15px;border-radius: 1rem;outline: none;margin-top:20px;margin-bottom:20px" (click)="revTraverse()">Back</button> -->
+<div *ngFor="let f of fileUploads">
+    
+    <div *ngFor="let file of f">
+        
+        <div
+            *ngIf="file.name.endsWith('/') && file.name.startsWith(parent) "
+            >
+           <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)"> {{file.name}}</button>
+           <button (click)="remove(file)" >Remove</button>
+           <button (click)="download(file.name)" >Download</button>   
+    </div>
+        <app-details-upload [shared]="true" [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
+    </div>
+</div>

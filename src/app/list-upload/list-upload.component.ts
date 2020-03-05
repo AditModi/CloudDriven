@@ -7,6 +7,8 @@ import { saveAs } from 'file-saver';
 import { FileUpload } from '../file-upload';
 import { FileUploadService } from '../file-upload.service';
 import { int } from 'aws-sdk/clients/datapipeline';
+import { Shared } from '../shared';
+import { SharedService } from '../shared.service';
 
 
 @Component({
@@ -26,10 +28,14 @@ export class ListUploadComponent implements OnInit {
 
   ngOnInit() {
     this.level = 0
+      
+
+    
     //var str="bhaumik1/mydir/file.jpg"
     //var arr =  str.split('/')
     //console.log(arr)
     //console.log(arr.length)
+    
 
   }
   traverse(file: FileUpload) {
@@ -72,7 +78,7 @@ export class ListUploadComponent implements OnInit {
 
     if (enable) {
       this.fileUploads = this.uploadService.getFiles();
-
+      
     }
   }
 

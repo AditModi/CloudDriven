@@ -10,6 +10,7 @@ import { FileUploadService } from '../file-upload.service';
 export class DetailsUploadComponent implements OnInit {
   @Input() fileUpload: FileUpload;
   @Input() level;
+  @Input() shared:Boolean=false;
   qr_url:string;
   qr_flag:boolean;
   @Input() parent:string;

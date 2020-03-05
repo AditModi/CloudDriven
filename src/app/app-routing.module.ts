@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {ChatbotComponent} from 'src/app/chatbot/chatbot.component';
 import { NotesComponent } from './notes/notes.component';
+import { SharedComponent } from './shared/shared.component';
 
 const routes: Routes = [
    {path:'',redirectTo:'home',pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'user-profile',component:UserProfileComponent},
   {path:'chatbot',component:ChatbotComponent},
-  {path:'notes',component:NotesComponent}  
+  {path:'notes',component:NotesComponent},
+  {path:'shared',component:SharedComponent}  
 ];
 
 @NgModule({
