@@ -1,9 +1,8 @@
-.all {
-    display: flex;
-    height: 90vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.wrapperhead {
+    background-image: url(../../assets/pictures/digital-global-technology-banner-with-circuit-diagram_1017-17946.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .header {
@@ -24,8 +23,8 @@ nav {
 .btn-2 {
     -webkit-transition: none;
     transition: none;
-    background: #1a53ff;
-    border: none;
+    background-color: transparent;
+    border: 3px solid blue;
     border-radius: 60px;
     color: #fff;
     cursor: pointer;
@@ -49,23 +48,13 @@ nav {
 }
 
 .wrapper {
-    background-color: #b3e0ff;
+    background-color: transparent;
     border-radius: 1rem;
-    margin: 0 auto;
     max-width: 600px;
     padding: 2rem;
-    width: 100%;
     z-index: 1;
-    box-shadow: 8px 8px 5px #aaaaaa;
-}
-
-.wrapper:hover {
-    box-shadow: 17px 17px 5px #aaaaaa;
-}
-
-.wrapperhead {
-    height: 560px;
-    z-index: 0px;
+    top: 18%;
+    left: 50%;
 }
 
 .uploadlink:hover {
