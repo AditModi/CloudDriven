@@ -47,23 +47,19 @@ nav {
 }
 
 .wrapper {
-    background-color: #b3e0ff;
-    border-radius: 1rem;
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 2rem;
+    background-color: transparent;
+    position: sticky;
     width: 100%;
     z-index: 1;
-    box-shadow: 8px 8px 5px #aaaaaa;
-}
-
-.wrapper:hover {
-    box-shadow: 17px 17px 5px #aaaaaa;
+    top: 20%;
+    left: 50%;
 }
 
 .wrapperhead {
-    height: 560px;
-    z-index: 0px;
+    background-image: url(../../assets/pictures/6365.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .uploadlink:hover {
@@ -115,11 +111,13 @@ img {
 }
 
 .hoverable {
-    position: relative;
+    position: sticky;
     display: block;
     cursor: pointer;
     height: 200px;
     width: 200px;
+    top: 30%;
+    left: 44%;
     border: 5px solid #000;
     border-radius: 50%;
 }

@@ -1,14 +1,12 @@
-<div style="background-color:#EBF7FB; width: 100%; height: 100vh; overflow:auto; ">
-    <div style="height:60px;"></div>
-    <div class="wrapperhead" style="padding-top: 50px;">
-        <div class="wrapper " style="padding-top:10px">
+<div class="wrapperhead" style="width: 100%;height:100%">
+    <div class="wrapper ">
 
-            <div class="nav-brand text-center" style="font-weight: 800;">
-                <p class="uploadlabel" style='margin-bottom:20px; text-align: center; color:#005ce6;font-weight: 800; font-size: 35px;text-shadow:2px 2px 2px #aaaaaa;'>Hello , {{ uname }}</p>
-            </div>
-            <div class="text-center" style="margin-left:165px;">
-                <label class="hoverable text-center" for="fileInput">
-            
+        <div class="nav-brand text-center" style="font-weight: 800;">
+            <p class="uploadlabel" style='margin-bottom:20px; text-align: center; color:#005ce6;font-weight: 800; font-size: 35px;text-shadow:2px 2px 2px #aaaaaa;'>Hello , {{ uname }}</p>
+        </div>
+        <div class="text-center" style="">
+            <label class="hoverable text-center" for="fileInput">
+
               <img *ngIf="!picflag" [src]="profile[1] ? profile[1].url : 'https://www.w3schools.com/howto/img_avatar.png'" >
               <!-- <div *ngFor="let p of profile | async">
                 <img *ngIf="!(p.name.endsWith('/'))"  [src]="p.url" >
@@ -17,41 +15,39 @@
               <div class="hover-text">Choose an Image</div>
               <div class="background"></div>
             </label>
-            </div>
-            <br/>
-            <div class="text-center">
-                <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
-                <button *ngIf="url" class="btn-2 uploadbutton" style="width: 140px;height: 40px;" (click)="delete()">Delete</button>
+        </div>
+        <br/>
+        <div class="text-center">
+            <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
+            <button *ngIf="url" class="btn-2 uploadbutton" style="width: 140px;height: 40px;" (click)="delete()">Delete</button>
 
-                <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
-            </div>
-            <div class="container">
-                <table align="center" style="font-size: 25px;">
-                    <tr>
-                        <th>Username : </th>
-                        <th>{{uname}}</th>
-                    </tr>
-                    <tr>
-                        <th *ngIf="!sflag" ><button (click)="calculateSpace()" class="btn btn-primary">Show Storage</button></th>
-                        <th *ngIf="sflag" ><button (click)="sflag=false" class="btn btn-primary">Hide Storage</button></th>
-                    </tr>
-                    <tr *ngIf="sflag">
-                        <th>Used Space : {{ space/1000  }} KB</th>
-                        <th></th>
-                    </tr>
-                    <tr *ngIf="sflag">
-                        <th>Free Space : </th>
-                        <th></th>
-                    </tr>
-
-
-                </table>
-            </div>
+            <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
+        </div>
+        <div class="container">
+            <table align="center" style="font-size: 25px;">
+                <tr>
+                    <th>Username : </th>
+                    <th>{{uname}}</th>
+                </tr>
+                <tr>
+                    <th *ngIf="!sflag"><button (click)="calculateSpace()" class="btn btn-primary">Show Storage</button></th>
+                    <th *ngIf="sflag"><button (click)="sflag=false" class="btn btn-primary">Hide Storage</button></th>
+                </tr>
+                <tr *ngIf="sflag">
+                    <th>Used Space : {{ space/1000 }} KB</th>
+                    <th></th>
+                </tr>
+                <tr *ngIf="sflag">
+                    <th>Free Space : </th>
+                    <th></th>
+                </tr>
 
 
+            </table>
         </div>
 
 
     </div>
+
 
 </div>
