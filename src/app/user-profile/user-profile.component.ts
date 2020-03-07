@@ -6,6 +6,7 @@ import { StorageService } from '../storage.service';
 import { FileUploadService } from '../file-upload.service';
 import { FileUpload } from '../file-upload';
 import { Observable } from 'rxjs';
+import { lstat } from 'fs';
 
 @Component({
   selector: 'app-user-profile',
@@ -20,6 +21,8 @@ export class UserProfileComponent implements OnInit {
   sflag
   uname: string = "";
   picflag=false
+  lflag=false;
+  lst:Array<FileUpload>=[]
   fileUploads: Observable<Array<FileUpload>>;
   profile: Array<FileUpload>;
   constructor(private router: Router, private logservice: LoginService, private uploadService: FileUploadService) { }
@@ -59,10 +62,18 @@ export class UserProfileComponent implements OnInit {
 
   calculateSpace() {
     var s = 0
+    var list:FileUpload[]=[]
     this.fileUploads.subscribe(data => data.forEach(function (val) {
       //console.log(val)
       s = s + val.size
+      if(!(val.name.endsWith('/'))){
+        list.push(val)
+      }
     }))
+    this.lst = list.sort(function(a,b){
+      return b.size-a.size
+    })
+    console.log(this.lst)
     this.space = s
     this.sflag = true;
 
@@ -86,6 +97,12 @@ export class UserProfileComponent implements OnInit {
       this.picflag=false
       console.log("updated profile pic")
     }
+  }
+
+  deleteFile(file) {
+    this.uploadService.deleteFile(file);
+    this.lst.splice(this.lst.indexOf(file),1)
+    //window.location.reload();
   }
 
 }
