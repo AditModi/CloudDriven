@@ -431,24 +431,17 @@ nav a:hover:after {
 }
 
 .wrapper {
-    background-color: #b3e0ff;
+    position: absolute;
     border-radius: 1rem;
-    margin: 0 auto;
-    max-width: 1300px;
-    padding: 2rem;
     width: 100%;
-    z-index: 1;
-    box-shadow: 8px 8px 5px #aaaaaa;
-}
-
-.wrapper:hover {
-    box-shadow: 17px 17px 5px #aaaaaa;
+    top: 10%;
 }
 
 .wrapperhead {
-    height: auto;
-    z-index: 0px;
-    padding: 4rem;
+    background-image: url(../../assets/pictures/6365.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .uploadlabel:hover {

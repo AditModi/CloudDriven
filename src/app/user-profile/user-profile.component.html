@@ -56,6 +56,29 @@
             </div>
 
 
+            <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
+        </div>
+        <div class="container">
+            <table align="center" style="font-size: 25px;">
+                <tr>
+                    <th>Username : </th>
+                    <th>{{uname}}</th>
+                </tr>
+                <tr>
+                    <th *ngIf="!sflag"><button (click)="calculateSpace()" class="btn btn-primary">Show Storage</button></th>
+                    <th *ngIf="sflag"><button (click)="sflag=false" class="btn btn-primary">Hide Storage</button></th>
+                </tr>
+                <tr *ngIf="sflag">
+                    <th>Used Space : {{ space/1000 }} KB</th>
+                    <th></th>
+                </tr>
+                <tr *ngIf="sflag">
+                    <th>Free Space : </th>
+                    <th></th>
+                </tr>
+
+
+            </table>
         </div>
 
 

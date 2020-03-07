@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo-box">
             <a href="/">
-                <img src="https://html5book.ru/wp-content/uploads/2015/01/logo-header.png">
+                <img style="width:40px;height: 40px;" src="https://html5book.ru/wp-content/uploads/2015/01/logo-header.png">
 
 
             </a>
@@ -16,14 +16,16 @@
 
 
             <ul>
-                <li><a routerLink="">home</a></li>
-                <li><a routerLink="/chatbot">contact</a></li>
-                <li><a routerLink="/dashboard">Dashboard</a></li>
-                <li *ngIf="logFlag"><a routerLink="/shared">Shared</a></li>
-                <li><a routerLink="/notes" routerLinkActive="true">Notes</a></li>
-                <li *ngIf="logFlag"><a routerLink="/user-profile">Profile</a></li>
-                <li *ngIf="!logFlag"><a routerLink="/login">login</a></li>
+
+                <li><a routerLink="" routerLinkActive="homeclass">home</a></li>
+                <li><a routerLink="/chatbot" routerLinkActive="activeclass">contact</a></li>
+                <li><a routerLink="/dashboard" routerLinkActive="activeclass">Dashboard</a></li>
+                <li *ngIf="logFlag"><a routerLink="/shared" routerLinkActive="activeclass">Shared</a></li>
+                <li><a routerLink="/notes" routerLinkActive="activeclass">Notes</a></li>
+                <li *ngIf="logFlag"><a routerLink="/user-profile" routerLinkActive="activeclass">Profile</a></li>
+                <li *ngIf="!logFlag"><a routerLink="/login" routerLinkActive="activeclass">login</a></li>
                 <li *ngIf="logFlag"><a href="#" (click)="logout()">logout</a></li>
+
 
 
             </ul>

@@ -1,5 +1,6 @@
 <link href="http://fonts.googleapis.com/css?
 family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+<div style="height: 10px;"></div>
 <div>
 
     <ul>
@@ -10,7 +11,7 @@ family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
                     <h2 *ngIf="!edit[i]">{{ note.title }}</h2>
                     <input *ngIf="edit[i]" type="text" [(ngModel)]="note.title">
                     <p *ngIf="!edit[i]">{{ note.text }}</p>
-                    <textarea style="margin-top: 1em; columns: 20;" [(ngModel)]="note.text" *ngIf="edit[i]"></textarea>
+                    <textarea style="margin-top: 3em; columns: 20;" [(ngModel)]="note.text" *ngIf="edit[i]"></textarea>
 
                 </a>
                 <button *ngIf="edit[i]" (click)="save(note)" type="button" class="btn btn-save">Save</button>
@@ -20,8 +21,7 @@ family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
         <li>
             <a href="#" (click)="add($event)">
                 <p style="text-align: center;padding: 1em;">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i><br>
-                    Click to add new note
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i><br> Click to add new note
                 </p>
             </a>
         </li>
