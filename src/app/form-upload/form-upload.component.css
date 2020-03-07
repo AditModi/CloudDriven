@@ -432,16 +432,12 @@ nav a:hover:after {
 
 .wrapper {
     position: absolute;
-    border-radius: 1rem;
     width: 100%;
     top: 10%;
 }
 
 .wrapperhead {
-    background-image: url(../../assets/pictures/6365.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: white;
 }
 
 .uploadlabel:hover {
