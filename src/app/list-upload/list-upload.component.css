@@ -1,10 +1,10 @@
 .button {
-    background-color: #0080ff;
+    background-color: #2b5988;
     outline: none;
 }
 
 .button:hover {
-    background-color: #0066cc;
+    background-color: #254b74;
 }
 
 .button1 {
@@ -13,4 +13,145 @@
 
 .button1:hover {
     background-color: #0073e6;
+}
+
+.back:hover {
+    width: 32px;
+    height: 32px;
+}
+
+.folder {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0
+}
+
+.folder:hover {
+    background: #d8e5f3;
+}
+
+.arrow-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: sticky;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.arrow-1 {
+    width: 100px;
+    height: 100px;
+    background: #00BCD4;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.arrow-2 {
+    width: 60px;
+    height: 60px;
+    background: #00BCD4;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    display: table;
+}
+
+.arrow-2:before {
+    width: 52px;
+    height: 52px;
+    content: "";
+    border: 2px solid #006064;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.arrowup {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+    top: 10px;
+    color: #006064;
+}
+
+
+/* Custom Animate.css */
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.4, .4, .4);
+        transform: scale3d(.4, .4, .4);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.4, .4, .4);
+        transform: scale3d(.4, .4, .4);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: white;
+    border: 0;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

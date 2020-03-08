@@ -377,20 +377,18 @@ nav a:hover:after {
 }
 
 [type="file"]+label.btn-1 {
-    background-color: #0080ff;
     -webkit-transition: none;
     transition: none;
-}
-
-[type="file"]+label.btn-1:hover {
-    background-color: #0066cc;
+    color: black;
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+    margin-right: 10px;
+    background-color: #d8e5f3;
+    border: 1px solid #13263a;
 }
 
 [type="file"]+label {
-    background: #0080ff;
-    border: none;
-    border-radius: 60px;
-    color: #fff;
     cursor: pointer;
     display: inline-block;
     font-family: 'Poppins', sans-serif;
@@ -404,12 +402,15 @@ nav a:hover:after {
     vertical-align: middle;
 }
 
+[type="file"]+label:hover {
+    background-color: #b1cce7;
+}
+
 .btn-2 {
     -webkit-transition: none;
     transition: none;
-    background: #1a53ff;
+    background: #32649a;
     border: none;
-    border-radius: 60px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -427,29 +428,17 @@ nav a:hover:after {
 .btn-2:hover {}
 
 .uploadbutton:hover {
-    background-color: #0033cc;
+    background-color: #13263a;
 }
 
 .wrapper {
-    background-color: #b3e0ff;
-    border-radius: 1rem;
-    margin: 0 auto;
-    max-width: 1300px;
-    padding: 2rem;
-    width: 100%;
-    z-index: 1;
-    box-shadow: 8px 8px 5px #aaaaaa;
+    position: absolute;
+    width: 97%;
+    margin-top: 80px;
+    background: white;
 }
 
-.wrapper:hover {
-    box-shadow: 17px 17px 5px #aaaaaa;
-}
-
-.wrapperhead {
-    height: auto;
-    z-index: 0px;
-    padding: 4rem;
-}
+.wrapperhead {}
 
 .uploadlabel:hover {
     font-size: 35px;
@@ -466,13 +455,12 @@ nav a:hover:after {
     height: 200px;
     width: 80%;
     margin: 20px auto;
-    border: 2px dashed #1C8ADB;
-    border-radius: 10px;
+    border: 2px dashed #13263a;
 }
 
 .uploadfilecontainer:hover {
     cursor: pointer;
-    background-color: #9ecbec !important;
+    background-color: #b1cce7 !important;
     opacity: 0.8;
 }
 

@@ -42,7 +42,7 @@ export class SharedListComponent implements OnInit {
     //     }
     //   })
     // }
-    
+
   }
 
   remove(folder:FileUpload){
@@ -53,7 +53,7 @@ export class SharedListComponent implements OnInit {
       }
     }
   }
-  
+
   traverse(file: FileUpload) {
 
     this.level = this.level + 1
@@ -100,9 +100,9 @@ export class SharedListComponent implements OnInit {
           files.push(val)
         }
       })
-      
+
     })
-    
+
     files.forEach(function (val) {
       var filename = val.name.split('/').pop()
       JSZipUtils.getBinaryContent(val.url, function (err, data) {
