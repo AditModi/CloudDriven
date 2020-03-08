@@ -379,13 +379,12 @@ nav a:hover:after {
 [type="file"]+label.btn-1 {
     -webkit-transition: none;
     transition: none;
-    color: black;
+    color: white;
     width: 180px;
     height: 50px;
     font-size: 15px;
     margin-right: 10px;
-    background-color: #d8e5f3;
-    border: 1px solid #13263a;
+    background-color: #66b3ff;
 }
 
 [type="file"]+label {
@@ -403,7 +402,7 @@ nav a:hover:after {
 }
 
 [type="file"]+label:hover {
-    background-color: #b1cce7;
+    background-color: #0073e6;
 }
 
 .btn-2 {
@@ -435,7 +434,7 @@ nav a:hover:after {
     position: absolute;
     width: 97%;
     margin-top: 80px;
-    background: white;
+    background: transparent;
 }
 
 .wrapperhead {}
