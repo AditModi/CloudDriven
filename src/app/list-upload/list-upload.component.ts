@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable, forkJoin } from 'rxjs';
-
+import * as $ from 'jquery'
 import * as JSZip from 'jszip'
 import * as JSZipUtils from 'jszip-utils'
 import { saveAs } from 'file-saver';
@@ -21,6 +21,9 @@ export class ListUploadComponent implements OnInit {
   dname: string;
   parent: string;
   showFile = false;
+  isSingleClick: Boolean = true;
+
+
   fileUploads: Observable<Array<FileUpload>>;
   level: int
   @Output() public childEvent = new EventEmitter()
@@ -28,17 +31,54 @@ export class ListUploadComponent implements OnInit {
 
   ngOnInit() {
     this.level = 0
-      
 
-    
+  $(document).ready(function() {
+    $.contextMenu({
+        selector: '.context-menu-one',
+        callback: function(key, options) {
+            var m = "clicked: " + key;
+        },
+        items: {
+            "edit": {name: "Edit", icon: "edit"},
+            "cut": {name: "Cut", icon: "cut"},
+           copy: {name: "Copy", icon: "copy"},
+            "paste": {name: "Paste", icon: "paste"},
+            "delete": {name: "Delete", icon: "delete"},
+            "sep1": "---------",
+            "quit": {name: "Quit", icon: function(){
+                return 'context-menu-icon context-menu-icon-quit';
+            }}
+        }
+    });
+
+    $('.context-menu-one').on('click', function(e){
+        console.log('clicked', this);
+    })
+});
+
+
     //var str="bhaumik1/mydir/file.jpg"
     //var arr =  str.split('/')
     //console.log(arr)
     //console.log(arr.length)
-    
+
 
   }
-  traverse(file: FileUpload) {
+
+  background() {
+    this.isSingleClick = true;
+ setTimeout(()=>{
+        if(this.isSingleClick){
+
+        }
+     },250);
+
+
+  }
+
+  traverse (file: FileUpload) {
+
+    this.isSingleClick = false;
 
     this.level = this.level + 1
     if (this.level == 1) {
@@ -51,7 +91,10 @@ export class ListUploadComponent implements OnInit {
     this.childEvent.emit(this.parent)
     console.log(this.parent)
     console.log(this.level)
+
+    alert('Double Click Event')
   }
+
 
   revTraverse() {
     this.level = this.level - 1;
@@ -78,7 +121,7 @@ export class ListUploadComponent implements OnInit {
 
     if (enable) {
       this.fileUploads = this.uploadService.getFiles();
-      
+
     }
   }
 
@@ -148,6 +191,7 @@ export class ListUploadComponent implements OnInit {
       })
     })
   }
+
 }
 
 
