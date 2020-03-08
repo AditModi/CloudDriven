@@ -1,7 +1,9 @@
-<div *ngIf="(!fileUpload.name.endsWith('/') && fileUpload.name.startsWith(parent)) && (shared || fileUpload.name.split('/').length==level+1)">
+<div style="margin-left: 10px;" *ngIf="(!fileUpload.name.endsWith('/') && fileUpload.name.startsWith(parent)) && (shared || fileUpload.name.split('/').length==level+1)">
     <div class="dropdown text-center">
-        <img src="../../assets/pictures/file.png" style="width: 40px;height: 45px;"><br/>
-        <a href="{{fileUpload.url}}">{{fileUpload.name}}</a>
+        <div class="file">
+            <img src="../../assets/pictures/file.png" style="width: 40px;height: 45px;"><br/>
+            <a href="{{fileUpload.url}}">{{fileUpload.name}}</a>
+        </div>
         <div class="dropdown-content">
             <button (click)="copyText(fileUpload.url)" *ngIf="!qr_flag" style="width: 100%;">Share link</button>
             <button (click)="generateQR(fileUpload.url)" *ngIf="!qr_flag" style="width: 100%;">Share via QR-code</button>

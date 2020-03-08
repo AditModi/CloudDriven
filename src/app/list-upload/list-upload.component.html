@@ -1,37 +1,39 @@
 <div *ngIf="level>0" class="text-center">
     <div style="display:inline-block">
-        <div class="arrow-container animated fadeInDown" *ngIf='showFile' (click)='showFiles(false)'>
+        <div style="margin-top: 27px;cursor: pointer;" class="arrow-container animated fadeInDown" *ngIf='showFile' (click)='showFiles(false)'>
             <div class="arrow-2">
                 <i style="
             font-size: 40px;
             text-align: center;
             vertical-align: middle;
             margin-top:10px;
-            color: #006064;" class="fa fa-angle-up"></i>
+            color: white;cursor: pointer;" class="fa fa-angle-up"></i>
+                <span class="tooltiptext">Hide Files</span>
             </div>
             <div class="arrow-1 animated hinge infinite zoomIn"></div>
 
         </div>
     </div>
-    <div class="arrow-container animated fadeInDown" *ngIf='!showFile' (click)='showFiles(true)'>
+    <div style="cursor: pointer;" class="arrow-container animated fadeInDown" *ngIf='!showFile' (click)='showFiles(true)'>
         <div class="arrow-2">
-            <a class="tosection2" href="#section2">
-                <i style="
+
+            <i style="
             font-size: 40px;
             text-align: center;
             vertical-align: middle;
             margin-top:10px;
-            color: #006064;" class="fa fa-angle-down"></i>
-            </a>
+            color: white;" class="fa fa-angle-down"></i>
+            <span class="tooltiptext">Show Files</span>
+
         </div>
         <div class="arrow-1 animated hinge infinite zoomIn"></div>
     </div>
 
 </div>
-<div *ngIf="level==0" class="panel-heading">
-    <b style="color:#13263a; font-size: 25px;text-shadow:2px 2px 2px #aaaaaa;">Root directory</b><br />
-    <p style="color:#13263a;"><i>In this directory you can securely store your all files.</i></p>
-    <button style="text-decoration: underline;cursor: pointer; " (click)="traverse(file)">{{ uname  }}</button>
+<div *ngIf="level==0" class="panel-heading text-center" style="margin-top: 50px;">
+    <b style="color:#13263a; font-size: 35px;text-shadow:2px 2px 2px #aaaaaa;">Root directory</b><br />
+    <p style="color:#13263a;font-size: 20px;"><i>In this directory you can securely store your all files.</i></p>
+    <button style="cursor: pointer; " (click)="traverse(file)"><img src="../../assets/pictures/folder.png" style="width: 40px;height: 40px;"><br/>{{ uname  }}</button>
 </div>
 <div id="section2" *ngIf="level>0" [hidden]="!showFile">
 
@@ -39,7 +41,7 @@
         <div *ngIf="level>0" class="panel-heading">
 
 
-            <button style="border: 0;background-color: white;" (click)="revTraverse()"><i class="back" style="width: 50px;height: 50px;margin-bottom: 10px;" class="fas fa-arrow-circle-left"></i></button>
+            <button class="back" style="border: 0;background-color: transparent;" (click)="revTraverse()"><i  style="width: 50px;height: 50px;" class="fas fa-arrow-circle-left"></i></button>
             <div style="display: flex;">
                 <input style="width: 300px;" type="text" id="dname" class="form-control" [(ngModel)]="dname" placeholder="Enter directory name">
                 <button style="margin-left: 20px;" (click)="createDirectory()" class="btn btn-primary">+ Create Directory</button>
@@ -48,7 +50,7 @@
 
         </div>
 
-        <div style="display: inline-block;width: 100%;border:1px solid black;height: 500px; overflow-y: scroll;">
+        <div style="display: inline-block;width: 100%;border:1px solid black;height: 490px; overflow-y: scroll;background-color: transparent;">
 
             <div *ngFor="let file of fileUploads | async" style="vertical-align:top;display: inline-block;">
                 <div style="margin-left:10px;" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 && file.name.startsWith(parent) ">
@@ -76,7 +78,7 @@
                 </div>
 
             </div>
-            <div style="display: inline-block;margin-left: 10px;" *ngFor="let file of fileUploads | async">
+            <div style="display: inline-block;" *ngFor="let file of fileUploads | async">
 
                 <app-details-upload [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
 

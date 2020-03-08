@@ -19,9 +19,13 @@
 }
 
 .dropdown-content button:hover {
-    background-color: #ddd;
+    background-color: #d8e5f3;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.file:hover {
+    background: #d8e5f3;
 }
