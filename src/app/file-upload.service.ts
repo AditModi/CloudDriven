@@ -194,6 +194,5 @@ export class FileUploadService {
 
     return fileUploads;
   }
-  
 
 }

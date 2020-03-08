@@ -31,9 +31,9 @@ export class SharedListComponent implements OnInit {
     this.level=1
     //alert("Share")
     this.parent=""
-    this.uploadService.getSharedAll(this.list).subscribe(data=>{
-      this.fileUploads=data
-    })
+    ///this.uploadService.getSharedAll(this.list).subscribe(data=>{
+     // this.fileUploads=data
+   // })
     // for(let i=0;i<this.list.length;i++){
     //   this.uploadService.getShared(this.list[i].folder.name).subscribe(data=>{
     //     for(let j=0;j<data.length;j++){
