@@ -15,12 +15,14 @@
     </div>
     <div class="arrow-container animated fadeInDown" *ngIf='!showFile' (click)='showFiles(true)'>
         <div class="arrow-2">
-            <i style="
+            <a class="tosection2" href="#section2">
+                <i style="
             font-size: 40px;
             text-align: center;
             vertical-align: middle;
             margin-top:10px;
             color: #006064;" class="fa fa-angle-down"></i>
+            </a>
         </div>
         <div class="arrow-1 animated hinge infinite zoomIn"></div>
     </div>
@@ -31,54 +33,54 @@
     <p style="color:#13263a;"><i>In this directory you can securely store your all files.</i></p>
     <button style="text-decoration: underline;cursor: pointer; " (click)="traverse(file)">{{ uname  }}</button>
 </div>
-<div *ngIf="level>0" [hidden]="!showFile">
+<div id="section2" *ngIf="level>0" [hidden]="!showFile">
 
     <div class="panel panel-primary">
         <div *ngIf="level>0" class="panel-heading">
 
 
-            <button style="border: 0;background-color: white;" (click)="revTraverse()"><i class="back" style="width: 50px;height: 50px;margin-left:10px" class="fas fa-arrow-circle-left"></i></button>
-
-            <input type="text" id="dname" class="form-control" [(ngModel)]="dname" placeholder="Enter directory name" /><br />
-            <button (click)="createDirectory()" class="btn btn-primary">+ Create Directory</button>
-
+            <button style="border: 0;background-color: white;" (click)="revTraverse()"><i class="back" style="width: 50px;height: 50px;margin-bottom: 10px;" class="fas fa-arrow-circle-left"></i></button>
+            <div style="display: flex;">
+                <input style="width: 300px;" type="text" id="dname" class="form-control" [(ngModel)]="dname" placeholder="Enter directory name">
+                <button style="margin-left: 20px;" (click)="createDirectory()" class="btn btn-primary">+ Create Directory</button>
+            </div>
             <br />
 
         </div>
 
+        <div style="display: inline-block;width: 100%;border:1px solid black;height: 500px; overflow-y: scroll;">
 
-        <div *ngFor="let file of fileUploads | async" style="display: inline-block;">
-            <div *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 && file.name.startsWith(parent) ">
-                <!--First,third condition for directories-->
-                <!--Second condition for immediate children-->
-                <div class="dropdown">
-                    <button class="folder context-menu-one" (dblclick)="traverse(file)" (click)="background()">
-                  <img style="width: 40px;height: 45px;" src="../../assets/pictures/folder.png">
+            <div *ngFor="let file of fileUploads | async" style="vertical-align:top;display: inline-block;">
+                <div style="margin-left:10px;" *ngIf="file.name.endsWith('/') && (file.name.split('/')).length==level+2 && file.name.startsWith(parent) ">
+                    <!--First,third condition for directories-->
+                    <!--Second condition for immediate children-->
+                    <div class="dropdown">
+                        <button class="folder context-menu-one" (dblclick)="traverse(file)" (click)="background()">
+                  <img style="width: 45px;height: 45px;" src="../../assets/pictures/folder.png">
                   <br/>
                     {{file.name}}
 
 
                 </button>
-                    <div class="dropdown-content">
-                        <button (click)="deleteDirectory(file.name)" style="width: 100%;">
+                        <div class="dropdown-content">
+                            <button (click)="deleteDirectory(file.name)" style="width: 100%;">
                           <i class="fas fa-trash-alt"></i>&nbsp;&nbsp;
                           Delete
                     </button>
 
-                        <button (click)="download(file.name)" style="width: 100%;">
+                            <button (click)="download(file.name)" style="width: 100%;">
                           <i class="fas fa-download"></i> &nbsp; Download</button>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
+            <div style="display: inline-block;margin-left: 10px;" *ngFor="let file of fileUploads | async">
 
-        </div>
-        <br />
-        <div style="display: inline-block;margin-right: 20px;" *ngFor="let file of fileUploads | async">
-            <app-details-upload [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
+                <app-details-upload [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
 
+            </div>
         </div>
     </div>
-    <hr style="border-top:2px solid #0055ff;" />
-
 </div>

@@ -1,22 +1,21 @@
-<div  style="width:370px;background-color:#ccebff; border-radius: 1rem;" *ngIf="(!fileUpload.name.endsWith('/') && fileUpload.name.startsWith(parent)) && (shared || fileUpload.name.split('/').length==level+1)" class="jumbotron">
-    <!--First,third condition for files-->
-    <!--Second condition for immediate children-->
+<div *ngIf="(!fileUpload.name.endsWith('/') && fileUpload.name.startsWith(parent)) && (shared || fileUpload.name.split('/').length==level+1)">
+    <div class="dropdown text-center">
+        <img src="../../assets/pictures/file.png" style="width: 40px;height: 45px;"><br/>
+        <a href="{{fileUpload.url}}">{{fileUpload.name}}</a>
+        <div class="dropdown-content">
+            <button (click)="copyText(fileUpload.url)" *ngIf="!qr_flag" style="width: 100%;">Share link</button>
+            <button (click)="generateQR(fileUpload.url)" *ngIf="!qr_flag" style="width: 100%;">Share via QR-code</button>
+            <button *ngIf="!shared" (click)='delete(fileUpload)' style="width: 100%;">Delete</button>
+            <button *ngIf="!qr_flag" style="width:100%">{{fileUpload.size / 1000}} KB</button>
+            <button *ngIf="qr_flag" (click)="toggleQrFlag()" style="float: left;" class="close" aria-label="Close">
 
-    <div>
-
-        <a href="{{fileUpload.url}}">{{fileUpload.name}} ({{fileUpload.size / 1000}} KB)</a><br/><br/>
-        <button (click)="copyText(fileUpload.url)" style="margin-right: 10px;" class="btn btn-success">Share link</button>
-        <button (click)="generateQR(fileUpload.url)" style="width: 200px;" class="btn btn-success">Share via QR-code</button>
-        <button *ngIf="!shared" (click)='delete(fileUpload)' style="margin-top:10px;margin-bottom: 10px;" class="btn btn-danger">Delete</button>
-        <br/>
-        <button *ngIf="qr_flag" (click)="toggleQrFlag()" style="float: left;" class="close" aria-label="Close">
           <span aria-hidden="true" style="color: red;">&times;</span>
         </button>
-        <div *ngIf="qr_flag" id="qr">
+            <div *ngIf="qr_flag" id="qr">
 
-            <ngx-qrcode qrc-element-type="url" [qrc-value]="qr_url"></ngx-qrcode>
+                <ngx-qrcode qrc-element-type="url" [qrc-value]="qr_url"></ngx-qrcode>
 
+            </div>
         </div>
     </div>
-
 </div>

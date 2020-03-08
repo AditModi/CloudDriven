@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,AfterViewChecked } from '@angular/core';
 import { Observable, forkJoin } from 'rxjs';
 import * as $ from 'jquery'
 import * as JSZip from 'jszip'
@@ -32,29 +32,15 @@ export class ListUploadComponent implements OnInit {
   ngOnInit() {
     this.level = 0
 
-  $(document).ready(function() {
-    $.contextMenu({
-        selector: '.context-menu-one',
-        callback: function(key, options) {
-            var m = "clicked: " + key;
-        },
-        items: {
-            "edit": {name: "Edit", icon: "edit"},
-            "cut": {name: "Cut", icon: "cut"},
-           copy: {name: "Copy", icon: "copy"},
-            "paste": {name: "Paste", icon: "paste"},
-            "delete": {name: "Delete", icon: "delete"},
-            "sep1": "---------",
-            "quit": {name: "Quit", icon: function(){
-                return 'context-menu-icon context-menu-icon-quit';
-            }}
-        }
-    });
 
-    $('.context-menu-one').on('click', function(e){
-        console.log('clicked', this);
-    })
-});
+    $('.tosection2').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+      return false;
+  });
+
+
 
 
     //var str="bhaumik1/mydir/file.jpg"
