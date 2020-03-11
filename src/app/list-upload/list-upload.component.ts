@@ -78,7 +78,6 @@ export class ListUploadComponent implements OnInit {
     console.log(this.parent)
     console.log(this.level)
 
-    alert('Double Click Event')
   }
 
 

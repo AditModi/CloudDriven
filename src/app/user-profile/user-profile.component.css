@@ -48,11 +48,11 @@ nav {
 
 .wrapper {
     background-color: transparent;
-    position: sticky;
+    position: absolute;
     width: 100%;
     z-index: 1;
     top: 20%;
-    left: 50%;
+    left: 0%;
 }
 
 .wrapperhead {
@@ -107,19 +107,15 @@ p {
 img {
     height: 100%;
     width: 100%;
-    border-radius: 50%;
 }
 
 .hoverable {
     position: sticky;
     display: block;
     cursor: pointer;
-    height: 200px;
-    width: 200px;
-    top: 30%;
-    left: 44%;
-    border: 5px solid #000;
-    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    float: left;
 }
 
 .hoverable .hover-text {
@@ -140,7 +136,6 @@ img {
     right: 0;
     background-color: rgba(255, 255, 255, 0.5);
     pointer-events: none;
-    border-radius: 50%;
     z-index: 1;
 }
 
