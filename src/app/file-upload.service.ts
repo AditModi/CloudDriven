@@ -163,9 +163,9 @@ export class FileUploadService {
       // for(let j of fList[i]){
       //   //final.push(fList[i][j])
       //   console.log(j)
-      // } 
+      // }
     }
-    
+
     return of(fList)
   }
 

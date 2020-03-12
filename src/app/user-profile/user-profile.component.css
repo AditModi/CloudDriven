@@ -48,19 +48,13 @@ nav {
 
 .wrapper {
     background-color: transparent;
-    position: sticky;
+    position: absolute;
     width: 100%;
     z-index: 1;
     top: 20%;
-    left: 50%;
 }
 
-.wrapperhead {
-    background-image: url(../../assets/pictures/6365.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
+.wrapperhead {}
 
 .uploadlink:hover {
     font-size: 25px;
@@ -107,19 +101,18 @@ p {
 img {
     height: 100%;
     width: 100%;
-    border-radius: 50%;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hoverable {
-    position: sticky;
+    position: absolute;
     display: block;
     cursor: pointer;
-    height: 200px;
-    width: 200px;
-    top: 30%;
-    left: 44%;
-    border: 5px solid #000;
-    border-radius: 50%;
+    height: 400px;
+    width: 350px;
+    border: 4px solid white;
+    left: 10%;
+    top: 10%;
 }
 
 .hoverable .hover-text {
@@ -140,7 +133,6 @@ img {
     right: 0;
     background-color: rgba(255, 255, 255, 0.5);
     pointer-events: none;
-    border-radius: 50%;
     z-index: 1;
 }
 

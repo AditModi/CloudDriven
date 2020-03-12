@@ -384,7 +384,7 @@ nav a:hover:after {
     height: 50px;
     font-size: 15px;
     margin-right: 10px;
-    background-color: #66b3ff;
+    background-color: #0066cc;
 }
 
 [type="file"]+label {
@@ -408,7 +408,7 @@ nav a:hover:after {
 .btn-2 {
     -webkit-transition: none;
     transition: none;
-    background: #32649a;
+    background: #004d99;
     border: none;
     color: #fff;
     cursor: pointer;
