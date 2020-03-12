@@ -10,24 +10,24 @@ import {Message} from '../../message';
 export class ChatbotComponent implements OnInit {
 
   lex: LexRuntime;
-  userInput: string = "";
+  userInput: string = "What is my storage space?";
   messages: Message[] = [];
   lexState: string = "Hi what would you like to do";
   constructor() { }
 
   ngOnInit() {
-    this.messages.push(new Message(this.lexState,"Bot"));
+    //this.messages.push(new Message(this.lexState,"Bot"));
   }
   postLexText() {
     var params = {
     botAlias: '\$LATEST', 
-    botName: 'chatbot', 
+    botName: 'CloudDrivenBot', 
     inputText: 'Testing', 
     userId: 'User',
     };
     this.lex = new LexRuntime({
-    accessKeyId: "",
-    secretAccessKey: "",
+    accessKeyId: "xxx",
+    secretAccessKey: "xxx",
     region: "us-east-1"
     });
     params.inputText= this.userInput;
