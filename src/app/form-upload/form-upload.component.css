@@ -454,7 +454,7 @@ nav a:hover:after {
     height: 200px;
     width: 80%;
     margin: 20px auto;
-    border: 2px dashed #13263a;
+    border: 4px dashed #13263a;
 }
 
 .uploadfilecontainer:hover {
@@ -469,10 +469,10 @@ nav a:hover:after {
     width: 80%;
     margin: 10px auto;
     background: #ffffff;
-    border: 1px dashed;
+    border: 3px dashed;
     border-radius: 12px;
     padding: 5px;
-    color: #1c8adb;
+    color: #13263a;
 }
 
 .files-list .delete-file {

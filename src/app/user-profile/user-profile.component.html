@@ -21,14 +21,15 @@
                     <div class="hover-text">Choose an Image</div>
                     <div class="background"></div>
                 </label>
+        <div class="text-center">
+            <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
+            <button *ngIf="url" class="btn-2 uploadbutton" style="width: 140px;height: 40px;" (click)="delete()">Delete</button>
+
+            <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
+        </div>
     </div>
     <br />
-    <div class="text-center">
-        <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
-        <button *ngIf="url" class="btn-2 uploadbutton" style="width: 140px;height: 40px;" (click)="delete()">Delete</button>
 
-        <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
-    </div>
     <div class="container">
         <table align="center" style="font-size: 25px;">
             <tr>

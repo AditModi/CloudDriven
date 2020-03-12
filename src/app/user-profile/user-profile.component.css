@@ -122,6 +122,9 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    font-family: "Times New Roman";
+    font-size: 30px;
+    color: white;
 }
 
 .hoverable .background {
@@ -131,7 +134,7 @@ img {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 26, 51, 0.5);
     pointer-events: none;
     z-index: 1;
 }
