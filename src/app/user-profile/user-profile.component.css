@@ -102,6 +102,7 @@ img {
     height: 100%;
     width: 100%;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+    border: 0.5px solid black;
 }
 
 .hoverable {
@@ -160,4 +161,6 @@ img {
 th {
     color: #0066ff;
     text-shadow: 2px 2px 3px #aaaaaa;
+    width: 200px;
+    text-align: center;
 }

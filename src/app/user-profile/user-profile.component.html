@@ -20,31 +20,32 @@
                     <img *ngIf="picflag" [src]='url'>
                     <div class="hover-text">Choose an Image</div>
                     <div class="background"></div>
-                </label>
-        <div class="text-center">
-            <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
-            <button *ngIf="url" class="btn-2 uploadbutton" style="width: 140px;height: 40px;" (click)="delete()">Delete</button>
+                    <div class="text-center"  style="position: sticky; margin-top: 10px;">
+                      <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
+                      <button *ngIf="url && picflag"  class="btn-2 uploadbutton" style="width: 140px;height: 40px;" (click)="delete()">Delete &nbsp;<i class="fas fa-trash-alt"></i></button>
 
-            <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
-        </div>
+                      <button *ngIf="url && picflag"  (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload&nbsp;<i class="fa fa-upload"></i></button>
+                  </div>
+                </label>
+
     </div>
     <br />
 
-    <div class="container">
+    <div class="container" style="width:400px;">
         <table align="center" style="font-size: 25px;">
             <tr>
-                <th>Username : </th>
-                <th>{{uname}}</th>
+                <th>Username :&nbsp; </th>
+                <th>{{uname}}&nbsp;</th>
             </tr>
             <tr>
                 <th *ngIf="!sflag"><button (click)="calculateSpace()" class="btn btn-primary">Show
                                 Storage</button></th>
-                <th *ngIf="sflag"><button (click)="sflag=false" class="btn btn-primary">Hide Storage</button>
+                <th *ngIf="sflag"><button (click)="sflag=false" class="btn btn-primary"> Hide Storage</button>
                 </th>
             </tr>
             <tr *ngIf="sflag">
-                <th>Used Space : {{ space/1000 }} KB</th>
-                <th></th>
+                <th>Used Space :</th>
+                <th> {{ space/1000 }} KB</th>
             </tr>
             <tr *ngIf="sflag">
                 <th>Free Space : </th>
@@ -56,7 +57,7 @@
     </div>
 
 
-    <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
+
 </div>
 
 
