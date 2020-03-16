@@ -36,6 +36,11 @@ nav {
     outline: none;
     padding: 1rem 50px;
     position: relative;
+    color: #13263a;
+    height: 40px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #13263a;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     vertical-align: middle;
@@ -43,7 +48,7 @@ nav {
 }
 
 .uploadbutton:hover {
-    background-color: #0033cc;
+    background-color: rgb(140, 179, 217, 0.5);
 }
 
 .wrapper {
@@ -177,4 +182,24 @@ th {
 .borderless td,
 .borderless th {
     border: none;
+}
+
+google-chart {
+    display: block;
+    margin: 0 auto;
+    top: 0;
+}
+
+.file:hover {
+    background: #d8e5f3;
+}
+
+.free {
+    background-color: #00a3cc;
+    color: white;
+    border: 1px solid black;
+}
+
+.free:hover {
+    background-color: #007a99;
 }

@@ -41,6 +41,7 @@ export class UserProfileComponent implements OnInit {
    ];
    columnNames = ['Browser', 'Percentage'];
    options = {
+    backgroundColor: { fill:'transparent' }
    };
    width = 550;
    height = 400;
