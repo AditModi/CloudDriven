@@ -20,7 +20,7 @@ export class UserProfileComponent implements OnInit {
   space;
   sflag
   uname: string = "";
-  picflag=false
+  picflag=false;
   lflag=false;
   lst:Array<FileUpload>=[]
   fileUploads: Observable<Array<FileUpload>>;
@@ -38,16 +38,16 @@ export class UserProfileComponent implements OnInit {
       this.profile=data
     })
     console.log(this.profile)
-    
+
     //this.getPhoto()
-    
+
   }
 
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
       this.pic = event.target.files[0];
-      this.picflag=true
+      this.picflag=true;
       reader.readAsDataURL(event.target.files[0]); // read file as data url
 
       reader.onload = (event: any) => { // called once readAsDataURL is completed
@@ -57,7 +57,7 @@ export class UserProfileComponent implements OnInit {
   }
   public delete() {
     this.url = null;
-    this.picflag=false
+    this.picflag=false;
   }
 
   calculateSpace() {
@@ -83,7 +83,7 @@ export class UserProfileComponent implements OnInit {
     var files: FileUpload[];
     //this.profile.subscribe(data => {
     //files=data
-    
+
   //})
 }
 
@@ -92,10 +92,10 @@ export class UserProfileComponent implements OnInit {
     //console.log(file)
     this.uploadService.deleteFile(this.profile[1])
     if (this.pic) {
-      
+
       this.uploadService.uploadfile(this.pic, "Profile/" + this.uname + "/");
-      this.picflag=false
-      console.log("updated profile pic")
+      this.picflag=false;
+      console.log("updated profile pic");
     }
   }
 
