@@ -56,11 +56,7 @@ nav {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-    border: 0.5px solid black;
     z-index: -1;
-    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .uploadlink:hover {
@@ -118,12 +114,12 @@ img {
     position: absolute;
     display: block;
     cursor: pointer;
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: 220px;
     border: 4px solid white;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -30%);
+    left: 10%;
+    top: 35%;
+    transform: translate(-18%, -40%);
     border-radius: 50%;
 }
 

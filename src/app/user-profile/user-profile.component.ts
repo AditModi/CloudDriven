@@ -15,6 +15,8 @@ import { lstat } from 'fs';
   providers: [StorageService]
 })
 export class UserProfileComponent implements OnInit {
+
+
   url = '';
   dp:FileUpload;
   space;
@@ -28,6 +30,20 @@ export class UserProfileComponent implements OnInit {
   constructor(private router: Router, private logservice: LoginService, private uploadService: FileUploadService) { }
   user: any;
   pic;
+  type = 'PieChart';
+   data = [
+      ['Firefox', 45.0],
+      ['IE', 26.8],
+      ['Chrome', 12.8],
+      ['Safari', 8.5],
+      ['Opera', 6.2],
+      ['Others', 0.7]
+   ];
+   columnNames = ['Browser', 'Percentage'];
+   options = {
+   };
+   width = 550;
+   height = 400;
   ngOnInit() {
     this.uname = localStorage.getItem('user')
     //this.space=this.storageService.calculateSpace()
