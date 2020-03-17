@@ -22,8 +22,8 @@ export class FileUploadService {
     const bucket = new S3(
       {
 
-        accessKeyId: 'AKIA3LQVK65OS7TBQLPZ',
-        secretAccessKey: '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',
+        accessKeyId: 'xxx',
+        secretAccessKey: 'xxx',
         region: 'ap-south-1'
       }
     );
@@ -163,9 +163,9 @@ export class FileUploadService {
       // for(let j of fList[i]){
       //   //final.push(fList[i][j])
       //   console.log(j)
-      // } 
+      // }
     }
-    
+
     return of(fList)
   }
 

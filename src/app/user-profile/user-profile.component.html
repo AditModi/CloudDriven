@@ -1,84 +1,77 @@
-<div style="background-color:#EBF7FB; width: 100%; height: 100vh; overflow:auto; ">
-    <div style="height:60px;"></div>
-    <div class="wrapperhead" style="padding-top: 50px;">
-        <div class="wrapper " style="padding-top:10px">
+<div style="height: 60px;"></div>
+<div style="background-color:#dae6f1;width: 100%;height:auto;
+min-height:30px;
+height:auto !important;        /* for IE as it does not support min-height */
+height:30px; ">
+    <div style="width: 90%;margin:0 auto;background-color: #dae6f1;">
+        <div class="wrapperhead " style="padding-top:50px;height: 300px;width: 100%;">
 
-            <div class="nav-brand text-center" style="font-weight: 800;">
-                <p class="uploadlabel"
-                    style='margin-bottom:20px; text-align: center; color:#005ce6;font-weight: 800; font-size: 35px;text-shadow:2px 2px 2px #aaaaaa;'>
-                    Hello , {{ uname }}</p>
-            </div>
-            <div class="text-center" style="margin-left:165px;">
-                <label class="hoverable text-center" for="fileInput">
+            <p style="position:sticky;color: white;font-size: 50px;text-transform:capitalize;text-align: center;top:40%;">{{ uname }}</p>
+        </div>
 
-                    <img *ngIf="!picflag"
-                        [src]="profile[1] ? profile[1].url : 'https://www.w3schools.com/howto/img_avatar.png'">
-                    <!-- <div *ngFor="let p of profile | async">
+        <div style="height: 38px;background-color: white;width: 100%;border: 1px solid #d9d9d9;box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);"></div>
+
+        <label class="hoverable text-center" for="fileInput" style="z-index: 2;">
+
+                <img class="img-fluid"  *ngIf="!picflag" [src]="profile[1] ? profile[1].url : 'https://www.w3schools.com/howto/img_avatar.png'">
+                <!-- <div *ngFor="let p of profile | async">
                 <img *ngIf="!(p.name.endsWith('/'))"  [src]="p.url" >
               </div>  -->
-                    <img *ngIf="picflag" [src]='url'>
-                    <div class="hover-text">Choose an Image</div>
-                    <div class="background"></div>
-                </label>
+                <img class="img-fluid" *ngIf="picflag" [src]='url'>
+
+            <div class="background">
+              <div class="hover-text text-center">Choose an Image</div></div>
+              <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
+            <div class="text-center" *ngIf="picflag" style="position: sticky; margin-top: 10px;z-index: 2;background-color: white;
+            box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);">
+             <button (click)="picflag=false" *ngIf="picflag" style="background-color:transparent;border:none;float:right;"> <i class="fa fa-window-close" aria-hidden="true"></i></button><br/><br/>
+
+                <button *ngIf="picflag" class="btn-2 uploadbutton" style="width: 140px;" (click)="delete()">Delete &nbsp;<i class="fas fa-trash-alt"></i></button>
+
+                <button *ngIf="picflag" (click)="upload()" class="btn-2 uploadbutton" style="width: 140px;">Upload&nbsp;<i class="fa fa-upload"></i></button>
             </div>
-            <br />
+        </label>
+
+        <div style="width: 100%;height:500px;margin-top: 15px; background-color: white;box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);">
+
+
+
+
+
+
+            
             <div class="text-center">
-                <input id="fileInput" type='file' (change)="onSelectFile($event)" accept="image/*">
-                <button *ngIf="url" class="btn-2 uploadbutton" style="width: 140px;height: 40px;"
-                    (click)="delete()">Delete</button>
-
-                <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton"
-                    style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
-            </div>
-            <div class="container">
-                <table align="center" style="font-size: 25px;">
-                    <tr>
-                        <th>Username : </th>
-                        <th>{{uname}}</th>
-                    </tr>
-                    <tr>
-                        <th *ngIf="!sflag"><button (click)="calculateSpace()" class="btn btn-primary">Show
-                                Storage</button></th>
-                        <th *ngIf="sflag"><button (click)="sflag=false" class="btn btn-primary">Hide Storage</button>
-                        </th>
-                    </tr>
-                    <tr *ngIf="sflag">
-                        <th>Used Space : {{ space/1000  }} KB</th>
-                        <th></th>
-                    </tr>
-                    <tr *ngIf="sflag">
-                        <th>Free Space : </th>
-                    </tr>
-                    <tr *ngIf="sflag">
-                        <th><button (click)="lflag=true">Free up Space</button></th>
-                    </tr>
-                </table>
+                <button class="free" style="z-index: 4;width:170px;height:40px;" (click)="calculateSpace()">Free up Space</button>
             </div>
 
-
-            <button *ngIf="url" (click)="upload()" class="btn-2 uploadbutton" style="margin-left:10px;width: 140px;height: 40px;">Upload</button>
-        </div>
-        
-
-
-
-
-        <ng-container *ngIf="lflag">
-            <div style="display: block" *ngFor="let fileUpload of lst">
-
-                <div style="width:370px;background-color:#ccebff; border-radius: 1rem;" class="jumbotron">
+            <ng-container *ngIf="sflag" style="z-index: 4;overflow-y:scroll;width: 100%;height: 300px;">
+                <google-chart  id="chart" [type]="type" [data]="data" [columnNames]="columnNames" [options]="options" [width]="width" [height]="height">
+                </google-chart>
+               <p style="text-align: center;"> {{ (space/1000) }} KB Used out of 5 GB </p>
+                <div style="display: block " *ngFor="let fileUpload of lst ">
                     
-                    <div>
-
-                        <a href="{{fileUpload.url}}">{{fileUpload.name}} ({{fileUpload.size / 1000}} KB)</a><br /><br />
-                        <button (click)='deleteFile(fileUpload)' style="margin-top:10px;margin-bottom: 10px;"
-                            class="btn btn-danger">Delete</button>
-                        <br />
-
+                    <div class="file">
+                        <img src="../../assets/pictures/file2.jpg" style="width: 40px;height: 45px;"><br/>
+                        <a href="{{fileUpload.url}}">{{fileUpload.name}} ({{fileUpload.size / 1000}} KB)</a>
+                        <button (click)='deleteFile(fileUpload)' style="margin-top:10px;margin-bottom: 10px; " class="btn btn-danger ">Delete</button>
                     </div>
 
+                   
+                    
+                    <br />
+
                 </div>
-            </div>
-        </ng-container>
+
+            </ng-container>
+
+        </div>
+
+
+
+
+
+
     </div>
+
+    <div style="height: 20px;background-color: transparent; "></div>
 </div>

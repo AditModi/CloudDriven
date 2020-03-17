@@ -20,6 +20,11 @@
     height: 32px;
 }
 
+.back {
+    position: absolute;
+    top: 48%;
+}
+
 .folder {
     text-decoration: none;
     cursor: pointer;
@@ -44,7 +49,7 @@
 .arrow-1 {
     width: 100px;
     height: 100px;
-    background: #00BCD4;
+    background: #9999ff;
     opacity: 0.5;
     border-radius: 50%;
     position: absolute;
@@ -53,7 +58,7 @@
 .arrow-2 {
     width: 60px;
     height: 60px;
-    background: #00BCD4;
+    background: #264d73;
     border-radius: 50%;
     position: absolute;
     top: 20px;
@@ -66,7 +71,6 @@
     width: 52px;
     height: 52px;
     content: "";
-    border: 2px solid #006064;
     border-radius: 50%;
     position: absolute;
     top: 4px;
@@ -82,7 +86,11 @@
     vertical-align: middle;
     margin-top: 10px;
     top: 10px;
-    color: #006064;
+    color: #30649c;
+}
+
+.arrow-2:hover {
+    color: #2a5b89;
 }
 
 
@@ -149,9 +157,38 @@
 }
 
 .dropdown-content button:hover {
-    background-color: #ddd;
+    background-color: #d8e5f3;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.arrow-container:hover .tooltiptext {
+    visibility: visible;
 }

@@ -36,6 +36,11 @@ nav {
     outline: none;
     padding: 1rem 50px;
     position: relative;
+    color: #13263a;
+    height: 40px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #13263a;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     vertical-align: middle;
@@ -43,23 +48,20 @@ nav {
 }
 
 .uploadbutton:hover {
-    background-color: #0033cc;
+    background-color: rgb(140, 179, 217, 0.5);
 }
 
 .wrapper {
-    background-color: transparent;
-    position: sticky;
+    position: absolute;
     width: 100%;
-    z-index: 1;
-    top: 20%;
-    left: 50%;
 }
 
 .wrapperhead {
-    background-image: url(../../assets/pictures/6365.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../../assets/pictures/profileback.jpg);
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .uploadlink:hover {
@@ -107,28 +109,36 @@ p {
 img {
     height: 100%;
     width: 100%;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+    border: 0.5px solid black;
+    margin: 0px auto;
     border-radius: 50%;
 }
 
 .hoverable {
-    position: sticky;
+    position: absolute;
     display: block;
     cursor: pointer;
-    height: 200px;
-    width: 200px;
-    top: 30%;
-    left: 44%;
-    border: 5px solid #000;
+    height: 220px;
+    width: 220px;
+    border: 4px solid white;
+    left: 10%;
+    top: 35%;
+    transform: translate(-18%, -40%);
     border-radius: 50%;
 }
 
 .hoverable .hover-text {
     position: absolute;
     display: none;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    font-family: "Times New Roman";
+    font-size: 25px;
+    color: white;
+    border-radius: 50%;
 }
 
 .hoverable .background {
@@ -138,10 +148,10 @@ img {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 26, 51, 0.5);
     pointer-events: none;
+    z-index: 3;
     border-radius: 50%;
-    z-index: 1;
 }
 
 .hoverable:hover .hover-text {
@@ -165,4 +175,31 @@ img {
 th {
     color: #0066ff;
     text-shadow: 2px 2px 3px #aaaaaa;
+    width: 200px;
+    text-align: center;
+}
+
+.borderless td,
+.borderless th {
+    border: none;
+}
+
+google-chart {
+    display: block;
+    margin: 0 auto;
+    top: 0;
+}
+
+.file:hover {
+    background: #d8e5f3;
+}
+
+.free {
+    background-color: #00a3cc;
+    color: white;
+    border: 1px solid black;
+}
+
+.free:hover {
+    background-color: #007a99;
 }

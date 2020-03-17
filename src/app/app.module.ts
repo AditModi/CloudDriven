@@ -26,6 +26,7 @@ import { NotesService } from './notes.service';
 import {SharedService} from './shared.service'
 import { SharedComponent } from './shared/shared.component';
 import { SharedListComponent } from './shared-list/shared-list.component';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { SharedListComponent } from './shared-list/shared-list.component';
     FormsModule,
     NgxQRCodeModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,GoogleChartsModule.forRoot(),
   ],
   providers: [FileUploadService,LoginService,NotesService,SharedService],
   bootstrap: [AppComponent]

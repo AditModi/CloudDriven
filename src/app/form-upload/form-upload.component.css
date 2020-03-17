@@ -379,13 +379,12 @@ nav a:hover:after {
 [type="file"]+label.btn-1 {
     -webkit-transition: none;
     transition: none;
-    color: black;
+    color: white;
     width: 180px;
     height: 50px;
     font-size: 15px;
     margin-right: 10px;
-    background-color: #d8e5f3;
-    border: 1px solid #13263a;
+    background-color: #0066cc;
 }
 
 [type="file"]+label {
@@ -403,13 +402,13 @@ nav a:hover:after {
 }
 
 [type="file"]+label:hover {
-    background-color: #b1cce7;
+    background-color: #0073e6;
 }
 
 .btn-2 {
     -webkit-transition: none;
     transition: none;
-    background: #32649a;
+    background: #004d99;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -435,7 +434,7 @@ nav a:hover:after {
     position: absolute;
     width: 97%;
     margin-top: 80px;
-    background: white;
+    background: transparent;
 }
 
 .wrapperhead {}
@@ -455,7 +454,7 @@ nav a:hover:after {
     height: 200px;
     width: 80%;
     margin: 20px auto;
-    border: 2px dashed #13263a;
+    border: 4px dashed #13263a;
 }
 
 .uploadfilecontainer:hover {
@@ -470,10 +469,10 @@ nav a:hover:after {
     width: 80%;
     margin: 10px auto;
     background: #ffffff;
-    border: 1px dashed;
+    border: 3px dashed;
     border-radius: 12px;
     padding: 5px;
-    color: #1c8adb;
+    color: #13263a;
 }
 
 .files-list .delete-file {

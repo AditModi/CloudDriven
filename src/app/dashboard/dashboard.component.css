@@ -3,6 +3,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    z-index: -1;
 }
 
 .header {
@@ -24,7 +27,7 @@ nav {
     -webkit-transition: none;
     transition: none;
     background-color: transparent;
-    border: 3px solid blue;
+    border: 3px solid #0066cc;
     border-radius: 60px;
     color: #fff;
     cursor: pointer;
@@ -53,8 +56,8 @@ nav {
     max-width: 600px;
     padding: 2rem;
     z-index: 1;
-    top: 18%;
-    left: 50%;
+    top: 14%;
+    left: 55%;
 }
 
 .uploadlink:hover {
