@@ -70,7 +70,7 @@ export class UserProfileComponent implements OnInit {
     }
   }
   public delete() {
-   
+
     this.url = null;
     this.picflag=false;
   }
@@ -112,6 +112,9 @@ export class UserProfileComponent implements OnInit {
     this.data[2][1]=oth
     this.space = s
     this.sflag = true;
+    var h=document.getElementById("heightset");
+    h.style.height='1100px';
+    console.log(h.style.height)
 
   }
 

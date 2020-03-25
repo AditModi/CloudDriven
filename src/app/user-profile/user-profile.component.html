@@ -1,8 +1,8 @@
 <div style="height: 60px;"></div>
-<div style="background-color:#dae6f1;width: 100%;height:auto;
-min-height:30px;
-height:auto !important;        /* for IE as it does not support min-height */
-height:30px; ">
+<div id="heightset" style="background-color:#dae6f1;width: 100%;height:auto;
+
+height:700px !important;        /* for IE as it does not support min-height */
+">
     <div style="width: 90%;margin:0 auto;background-color: #dae6f1;">
         <div class="wrapperhead " style="padding-top:50px;height: 300px;width: 100%;">
 
@@ -31,38 +31,43 @@ height:30px; ">
                 <button *ngIf="picflag" (click)="upload()" class="btn-2 uploadbutton" style="width: 140px;">Upload&nbsp;<i class="fa fa-upload"></i></button>
             </div>
         </label>
-
-        <div style="width: 100%;height:500px;margin-top: 15px; background-color: white;box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);">
-
-
-
-
+        <div class="text-center">
+            <button class="free" style="z-index: 4;width:170px;height:40px;margin-top:50px" (click)="calculateSpace()">Free up Space</button>
+        </div>
+        <div *ngIf="sflag" style="width: 100%;height:600px;overflow-y:scroll;margin-top: 15px; background-color: white;box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);">
 
 
-            
+
+
+
+
+
             <div class="text-center">
-                <button class="free" style="z-index: 4;width:170px;height:40px;" (click)="calculateSpace()">Free up Space</button>
+
+                <google-chart *ngIf="sflag" id="chart" [type]="type" [data]="data" [columnNames]="columnNames" [options]="options" [width]="width" [height]="height">
+                </google-chart>
+                <p *ngIf="sflag" style="text-align: center;font-size: 25px;font-weight: 600;"> {{ (space/1000) }} KB Used out of 5 GB </p>
             </div>
 
-            <ng-container *ngIf="sflag" style="z-index: 4;overflow-y:scroll;width: 100%;height: 300px;">
-                <google-chart  id="chart" [type]="type" [data]="data" [columnNames]="columnNames" [options]="options" [width]="width" [height]="height">
-                </google-chart>
-               <p style="text-align: center;"> {{ (space/1000) }} KB Used out of 5 GB </p>
-                <div style="display: block " *ngFor="let fileUpload of lst ">
-                    
-                    <div class="file">
-                        <img src="../../assets/pictures/file2.jpg" style="width: 40px;height: 45px;"><br/>
-                        <a href="{{fileUpload.url}}">{{fileUpload.name}} ({{fileUpload.size / 1000}} KB)</a>
-                        <button (click)='deleteFile(fileUpload)' style="margin-top:10px;margin-bottom: 10px; " class="btn btn-danger ">Delete</button>
-                    </div>
 
-                   
-                    
-                    <br />
 
+            <div style="display:block;margin-top:20px " *ngFor="let fileUpload of lst ">
+
+                <div class="file text-center">
+                    <img src="../../assets/pictures/file.png" style="width: 40px;height: 45px;border: none;box-shadow: none;">
+
+                    <a href="{{fileUpload.url}}">{{fileUpload.name}} ({{fileUpload.size / 1000}} KB)</a> <button (click)='deleteFile(fileUpload)' style="margin-left:10px " class="btn btn-danger ">Delete</button>
                 </div>
 
-            </ng-container>
+
+
+
+
+
+
+            </div>
+            <div style="height:20px"></div>
+
 
         </div>
 

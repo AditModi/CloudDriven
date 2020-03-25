@@ -7,9 +7,7 @@
         
         .centered {
             position: absolute;
-            top: 60%;
-            left: 51%;
-            transform: translate(-50%, -50%);
+            margin-top: 2em;
             color: white;
             font-family: "Great Vibes", cursive;
             font-size: 30px;
@@ -19,10 +17,6 @@
         }
         
         .centered1 {
-            position: absolute;
-            top: 76%;
-            left: 51%;
-            transform: translate(-50%, -50%);
             color: white;
             font-family: "Great Vibes", cursive;
             font-size: 20px;
@@ -141,7 +135,13 @@
             font-size: 2.6rem;
         }
         
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:990px) {
+            .centered {
+                display: none;
+            }
+            .centered1 {
+                display: none;
+            }
             .navTrigger {
                 display: block;
             }

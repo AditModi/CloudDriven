@@ -2,9 +2,9 @@
     background-image: url(../../assets/pictures/digital-global-technology-banner-with-circuit-diagram_1017-17946.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background-size: cover;
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
     z-index: -1;
 }
 
