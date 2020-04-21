@@ -120,6 +120,7 @@ Live Mongo Database using mongo atlas by mLab – online platform providing data
 ## some screenshots for project
 
 ![WhatsApp Image 2020-04-21 at 12 53 14 PM](https://user-images.githubusercontent.com/48589838/79838412-9ab1c800-83d0-11ea-93a9-480af58c4c2c.jpeg)
+![dashboard1](https://user-images.githubusercontent.com/48589838/79842803-f4b58c00-83d6-11ea-950a-d49265e96755.png)
 ![WhatsApp Image 2020-04-21 at 12 53 16 PM](https://user-images.githubusercontent.com/48589838/79838418-9b4a5e80-83d0-11ea-8726-f38c1048410a.jpeg)
 ![WhatsApp Image 2020-04-21 at 12 53 17 PM (1)](https://user-images.githubusercontent.com/48589838/79838420-9c7b8b80-83d0-11ea-868f-9ac025c691f7.jpeg)
 ![WhatsApp Image 2020-04-21 at 12 53 17 PM](https://user-images.githubusercontent.com/48589838/79838394-94235080-83d0-11ea-9d50-9b17f2354d64.jpeg)
@@ -128,7 +129,8 @@ Live Mongo Database using mongo atlas by mLab – online platform providing data
 ![WhatsApp Image 2020-04-21 at 12 53 19 PM](https://user-images.githubusercontent.com/48589838/79838403-971e4100-83d0-11ea-8230-83448c082403.jpeg)
 ![WhatsApp Image 2020-04-21 at 12 55 19 PM](https://user-images.githubusercontent.com/48589838/79838405-97b6d780-83d0-11ea-842e-790be6e4bac7.jpeg)
 ![WhatsApp Image 2020-04-21 at 12 55 20 PM](https://user-images.githubusercontent.com/48589838/79838406-984f6e00-83d0-11ea-83ce-7304f90075b8.jpeg)
-![WhatsApp Image 2020-04-21 at 12 53 13 PM](https://user-images.githubusercontent.com/48589838/79838408-99809b00-83d0-11ea-8289-7a6824df2181.jpeg)
+![WhatsApp Image 2020-04-21 at 1 29 54 PM](https://user-images.githubusercontent.com/48589838/79842801-f3845f00-83d6-11ea-91e6-83315a54c12b.jpeg)
+![WhatsApp Image 2020-04-21 at 1 29 54 PM (1)](https://user-images.githubusercontent.com/48589838/79842806-f717e600-83d6-11ea-92de-bf74834404f3.jpeg)
 
 
 
