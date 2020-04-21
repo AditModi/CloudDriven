@@ -113,3 +113,20 @@ Live Mongo Database using mongo atlas by mLab – online platform providing data
 
 
 "Data that is Loved Tends to Survive"
+
+
+some screenshots for project
+
+
+![WhatsApp Image 2020-04-21 at 12 53 17 PM](https://user-images.githubusercontent.com/48589838/79838394-94235080-83d0-11ea-9d50-9b17f2354d64.jpeg)
+![WhatsApp Image 2020-04-21 at 12 53 18 PM (1)](https://user-images.githubusercontent.com/48589838/79838395-95547d80-83d0-11ea-81e2-0ec7de01924d.jpeg)
+![WhatsApp Image 2020-04-21 at 12 53 18 PM](https://user-images.githubusercontent.com/48589838/79838400-95ed1400-83d0-11ea-9d2a-37646fc1d8de.jpeg)
+![WhatsApp Image 2020-04-21 at 12 53 19 PM](https://user-images.githubusercontent.com/48589838/79838403-971e4100-83d0-11ea-8230-83448c082403.jpeg)
+![WhatsApp Image 2020-04-21 at 12 55 19 PM](https://user-images.githubusercontent.com/48589838/79838405-97b6d780-83d0-11ea-842e-790be6e4bac7.jpeg)
+![WhatsApp Image 2020-04-21 at 12 55 20 PM](https://user-images.githubusercontent.com/48589838/79838406-984f6e00-83d0-11ea-83ce-7304f90075b8.jpeg)
+![WhatsApp Image 2020-04-21 at 12 53 13 PM](https://user-images.githubusercontent.com/48589838/79838408-99809b00-83d0-11ea-8289-7a6824df2181.jpeg)
+![WhatsApp Image 2020-04-21 at 12 53 14 PM](https://user-images.githubusercontent.com/48589838/79838412-9ab1c800-83d0-11ea-93a9-480af58c4c2c.jpeg)
+![WhatsApp Image 2020-04-21 at 12 53 16 PM](https://user-images.githubusercontent.com/48589838/79838418-9b4a5e80-83d0-11ea-8726-f38c1048410a.jpeg)
+![WhatsApp Image 2020-04-21 at 12 53 17 PM (1)](https://user-images.githubusercontent.com/48589838/79838420-9c7b8b80-83d0-11ea-868f-9ac025c691f7.jpeg)
+
+
