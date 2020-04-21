@@ -49,12 +49,19 @@ Sticky Notes.
 ### What is Amazon Web Services??
 
 
+![image](https://user-images.githubusercontent.com/48589838/79836650-10686480-83ce-11ea-9ab5-f6022c1696ae.png)
+
 
 
 ### What is mean stack??
 
 
+![image](https://user-images.githubusercontent.com/48589838/79836694-224a0780-83ce-11ea-9270-4cdc5094473f.png)
+
+
+
 ### How we are using it??
+
 
 Our app is mainly divided in 3 core components , separated from each other for loose coupling in between.
 
@@ -65,6 +72,11 @@ Mongo Db
 All AWS services are integrated with angular framework for providing rich user – interface hosted on aws s3.
 Node api  for interacting with database , hosted on Heroku.
 Live Mongo Database using mongo atlas by mLab – online platform providing database as a service  
+
+
+![image](https://user-images.githubusercontent.com/48589838/79836773-3857c800-83ce-11ea-830d-f9b1e5dbd6bd.png)
+![image](https://user-images.githubusercontent.com/48589838/79836777-3b52b880-83ce-11ea-8cf5-6ee1487233ed.png)
+
 
 
 "Data that is Loved Tends to Survive"
