@@ -1,12 +1,70 @@
-# Personal Digital Storage and Secure Sharing
-![ss-converted-07](https://user-images.githubusercontent.com/48589838/75035763-3fe61800-54d6-11ea-90ac-13ca31365641.jpg)
-![ss-converted-08](https://user-images.githubusercontent.com/48589838/75035764-407eae80-54d6-11ea-932b-986c212f58bf.jpg)
-![ss-converted-09](https://user-images.githubusercontent.com/48589838/75035765-41174500-54d6-11ea-8311-3793bc00ebd1.jpg)
-![ss-converted-01](https://user-images.githubusercontent.com/48589838/75035772-43799f00-54d6-11ea-9e59-832b4d9862dc.jpg)
-![ss-converted-02](https://user-images.githubusercontent.com/48589838/75035774-44123580-54d6-11ea-854d-815f0b8ff1a4.jpg)
-![ss-converted-03](https://user-images.githubusercontent.com/48589838/75035775-44aacc00-54d6-11ea-8533-385f38170db3.jpg)
-![ss-converted-04](https://user-images.githubusercontent.com/48589838/75035776-45436280-54d6-11ea-8deb-9605abb46e29.jpg)
-![ss-converted-05](https://user-images.githubusercontent.com/48589838/75035758-3eb4eb00-54d6-11ea-9905-f2e9293e2f88.jpg)
-![ss-converted-10](https://user-images.githubusercontent.com/48589838/75035766-41afdb80-54d6-11ea-8c81-e6ad263c399c.jpg)
-![ss-converted-11](https://user-images.githubusercontent.com/48589838/75035769-42487200-54d6-11ea-93ad-f7e0b2dabf6b.jpg)
-![ss-converted-12](https://user-images.githubusercontent.com/48589838/75035771-42e10880-54d6-11ea-9723-93442533edeb.jpg)
+# Cloud-Driven
+
+what is digital storage?
+
+Want to store data and access it from anywhere. how to do it ? 
+
+how to share your personal storage securely?
+
+Why AWS is Best Solution?
+
+
+this are some questions that our project tries to solve !!
+
+
+
+## Our Project "Cloud-driven " is a part of our term work for college based on 'Personal Digital Storage and Secure Sharing' concept.
+
+### What Do We Provide???
+
+We provide a platform for storing your personal data securely and sharing it .	
+
+### Where is this Personal Data???
+
+The data is in the Cloud.
+
+### What all can be done??
+
+Personal Storage for Customers where everything can be stored from files to folders to pictures to zip files and even your secret private data using special notes feature.
+
+Sharing this Data is made easy using various options.
+
+
+
+### Features
+
+Serverless Login and Signup using aws cognito
+
+Files Upload and Download using drag and drop.
+
+Creating folders and storing files in a organized manner.
+
+Sharing Of files using Link Sharing and also using QR scan code.
+
+Folder Sharing between single or group of users.
+
+Sticky Notes.
+
+
+### What is Amazon Web Services??
+
+
+
+
+### What is mean stack??
+
+
+### How we are using it??
+
+Our app is mainly divided in 3 core components , separated from each other for loose coupling in between.
+
+Angular app
+Node api
+Mongo Db
+
+All AWS services are integrated with angular framework for providing rich user – interface hosted on aws s3.
+Node api  for interacting with database , hosted on Heroku.
+Live Mongo Database using mongo atlas by mLab – online platform providing database as a service  
+
+
+"Data that is Loved Tends to Survive"
