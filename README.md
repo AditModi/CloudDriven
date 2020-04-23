@@ -82,7 +82,8 @@ Sticky Notes.
 ### What is Amazon Web Services??
 
 
-![image](https://user-images.githubusercontent.com/48589838/79836650-10686480-83ce-11ea-9ab5-f6022c1696ae.png)
+[![image](https://user-images.githubusercontent.com/48589838/79836650-10686480-83ce-11ea-9ab5-f6022c1696ae.png)](https://docs.aws.amazon.com/)
+
 
 
 
