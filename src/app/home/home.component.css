@@ -7,7 +7,9 @@
         
         .centered {
             position: absolute;
-            margin-top: 2em;
+            width: 700px;
+            top: 45%;
+            left: 27%;
             color: white;
             font-family: "Great Vibes", cursive;
             font-size: 30px;
@@ -17,6 +19,9 @@
         }
         
         .centered1 {
+            position: absolute;
+            top: 70%;
+            left: 40%;
             color: white;
             font-family: "Great Vibes", cursive;
             font-size: 20px;
@@ -135,7 +140,13 @@
             font-size: 2.6rem;
         }
         
-        @media screen and (max-width:990px) {
+        @media screen and (max-width:1190px) {
+            .animate {
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 30px;
+            }
             .centered {
                 display: none;
             }

@@ -26,11 +26,22 @@ export class SignupComponent implements OnInit {
 
   onSignUp() {
     this.signstatus = 'signup';
+    var up=document.getElementById("up");
+    up.style.fontSize="50px";
+
+    var signin=document.getElementById("in");
+    signin.style.fontSize="40px";
 
   }
 
   onSignIn() {
     this.signstatus = 'signin';
+
+    var up=document.getElementById("in");
+    up.style.fontSize="50px";
+
+    var signup=document.getElementById("up");
+    signup.style.fontSize="40px";
   }
 
   singUpToAWS(email: HTMLInputElement,contactNo: HTMLInputElement,username: HTMLInputElement,password: HTMLInputElement) {
@@ -94,8 +105,8 @@ export class SignupComponent implements OnInit {
       this.route.navigate(['/dashboard'])
     })
       .catch(err => console.log(err));
-    
-      
+
+
 
   }
 
