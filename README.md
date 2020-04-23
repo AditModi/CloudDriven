@@ -90,7 +90,7 @@ Sticky Notes.
 ### What is mean stack??
 
 
-[![image](https://user-images.githubusercontent.com/48589838/79836694-224a0780-83ce-11ea-9270-4cdc5094473f.png)](http://meanjs.org/docs.html)
+[![image](https://user-images.githubusercontent.com/48589838/79836694-224a0780-83ce-11ea-9270-4cdc5094473f.png)](https://medium.com/@jeremyvsjeremy/what-is-the-mean-stack-9d11ae2cd384)
 
 
 
