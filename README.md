@@ -109,11 +109,10 @@ Live Mongo Database using mongo atlas by mLab – online platform providing data
 
 
 [![image](https://user-images.githubusercontent.com/48589838/79836773-3857c800-83ce-11ea-830d-f9b1e5dbd6bd.png)](https://devcenter.heroku.com/categories/reference)
-[![image](https://user-images.githubusercontent.com/48589838/79836777-3b52b880-83ce-11ea-8cf5-6ee1487233ed.png)](https://mlab.com/)
-<p>&nbsp;</p>
+[![image](https://user-images.githubusercontent.com/48589838/79836777-3b52b880-83ce-11ea-8cf5-6ee1487233ed.png)](https://mlab.com/)  
 >
-### Data that is Loved Tends to Survive
-<p>&nbsp;</p>
+### Data that is Loved Tends to Survive  
+
 ## some screenshots for project
 
 ![WhatsApp Image 2020-04-21 at 12 53 14 PM](https://user-images.githubusercontent.com/48589838/79838412-9ab1c800-83d0-11ea-93a9-480af58c4c2c.jpeg)
