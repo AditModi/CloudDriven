@@ -1,0 +1,63 @@
+.disableButton {
+    background-color: red;
+    border: none;
+    color: white;
+    height: 30px;
+}
+
+.disableButton:hover {
+    background-color: #b30000;
+}
+
+.newUser {
+    background-color: #006bb3;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+input[type="text"]::placeholder {
+    text-align: center;
+    color: #13263a;
+}
+
+input[type="text"] {
+    border: 1px solid black;
+}
+
+.shareNew {
+    background-color: #2c5887;
+    border: none;
+    color: white;
+    height: 45px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.shareNew:hover {
+    background-color: #13263a;
+}
+
+.folder {
+    background-color: white;
+    border: none;
+}
+
+.folder:hover {
+    background-color: #9fbee0;
+}
+
+.shareme {
+    background-color: #0052cc;
+    border: none;
+    color: white;
+    height: 42px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.shareme:hover {
+    background-color: #003d99;
+}

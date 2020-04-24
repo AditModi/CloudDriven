@@ -20,9 +20,9 @@ export class ChatbotComponent implements OnInit {
   }
   postLexText() {
     var params = {
-    botAlias: '\$LATEST', 
-    botName: 'CloudDrivenBot', 
-    inputText: 'Testing', 
+    botAlias: '\$LATEST',
+    botName: 'CloudDrivenBot',
+    inputText: 'Testing',
     userId: 'User',
     };
     this.lex = new LexRuntime({

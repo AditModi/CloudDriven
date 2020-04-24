@@ -12,7 +12,7 @@ import { FileUpload } from '../file-upload';
   styleUrls: ['./shared.component.css']
 })
 export class SharedComponent implements OnInit {
-
+  count=0;
   folders: Array<Shared> = []
   user:string;
   users:string=""
@@ -57,9 +57,12 @@ export class SharedComponent implements OnInit {
     }
   }
 
-  
+
 
   newShare() {
+    this.count=this.count+1;
+    if (this.count==1){
+
     for (let i = 0; i < this.newFolders.length; i++) {
       if ((this.newFolders[i].name.endsWith('/')) && this.newFolders[i].name != this.uname + '/') {
         console.log(i)
@@ -80,12 +83,14 @@ export class SharedComponent implements OnInit {
     this.list = l;
     this.new = true
   }
+  }
 
   select(folder:FileUpload) {
     this.selected = new Shared(folder,[])
-    
+
     this.selectFlag=true
     this.new=false;
+    this.count=0;
   }
 
   share(){

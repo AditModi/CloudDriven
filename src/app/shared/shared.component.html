@@ -1,39 +1,48 @@
 <div>
-    <h2 style="padding-top: 3em;">My folders</h2>
-    <hr style="border-top:2px solid #0055ff;" />
-    <div *ngFor="let f of folders" style="display: inline-block;">
-        <div class="text-center" *ngIf="f.folder.name.startsWith(uname)" style="display: inline-block;margin-left: 20px;">
-            <img style="width: 45px;height: 45px;" src="../../assets/pictures/folder.png"><br/>
-            <p style="font-weight: 500;"> {{f.folder.name}}</p> <button (click)="remove(f)">Disable sharing</button>
-            <br/>
-            <div class="dropdown">
+    <h2 class="text-center" style="text-decoration: underline;padding-top: 3em;">My folders</h2>
+    <div style="width: 95%;border: 1px solid black;height: 400px;margin-left: auto;margin-right: auto;overflow-y: scroll;margin-bottom: 20px;">
+        <div style="height: 10px;"></div>
+        <div *ngFor="let f of folders" style="display: inline-block;">
+            <div class="text-center" *ngIf="f.folder.name.startsWith(uname)" style="display: inline-block;margin-left: 20px;">
+                <img style="width: 45px;height: 45px;" src="../../assets/pictures/folder.png"><br/>
+                <p style="font-weight: 500;"> {{f.folder.name}}</p> <button class="disableButton" style="" (click)="remove(f)">Disable sharing</button>
                 <br/>
-                <button class="btn btn-default dropdown-toggle" type="button" style="background-color: #008ae6;color: white;" id="menu1" data-toggle="dropdown">Shared With
+                <div class="dropdown">
+                    <br/>
+                    <button class="btn btn-default dropdown-toggle" type="button" style="background-color: #008ae6;color: white;" id="menu1" data-toggle="dropdown">Shared With
       <span class="caret"></span></button>
-                <ul style="box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <ul style="box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);" class="dropdown-menu" role="menu" aria-labelledby="menu1">
 
 
-                    <li class="text-center" style="font-size: 15px;" *ngFor="let user of f.users" role="presentation"> {{user}} &nbsp;
-                        <button style="background-color: transparent;border: none;font-size: 17px;" (click)="removeUser(f,user)"><i style="color: red;" class="fas fa-trash-alt" aria-hidden="true"></i></button></li>
+                        <li class="text-center" style="font-size: 15px;" *ngFor="let user of f.users" role="presentation"> {{user}} &nbsp;
+                            <button style="background-color: transparent;border: none;font-size: 17px;" (click)="removeUser(f,user)"><i style="color: red;" class="fas fa-trash-alt" aria-hidden="true"></i></button></li>
 
-                </ul>
+                    </ul>
+                </div>
+                <br/>
+                <input class="username" type="text" [(ngModel)]="user" placeholder="Username">
+                <br/>
+                <button class="newUser" (click)="addUser(f)">Add new user</button>
+
             </div>
-            <br/>
-            <input type="text" [(ngModel)]="user" placeholder="Username">
-            <br/>
-            <button (click)="addUser(f)">Add new user</button>
-
         </div>
     </div>
-    <br/>
-    <button (click)="newShare()" class="btn btn-primary">Share new folder</button>
-    <br/>
-    <div *ngIf="new">
-        Select folder
-        <p *ngFor="let e of list">
-            <button (click)="select(e)">{{e.name}}</button>
-        </p>
 
+    <div class="text-center">
+        <button class="shareNew" (click)="newShare()">Share new folder</button></div>
+    <br/>
+
+    <div *ngIf="new" style="width: 95%;border: 1px solid black;height: 400px;margin-left: auto;margin-right: auto;overflow-y: scroll;">
+        <div>
+
+            <h4 class="text-center" style="text-decoration: underline;padding-top:1em;margin-bottom: 30px;">Select Folder</h4>
+            <p *ngFor="let e of list" style="display: inline-block;margin-left: 1.5em;">
+                <button class="folder" (click)="select(e)">
+              <img style="width: 45px;height: 45px;" src="../../assets/pictures/folder.png"><br/>
+              {{e.name}}</button>
+            </p>
+
+        </div>
     </div>
     <div *ngIf="selectFlag">
         <button>{{ selected.folder.name }}</button><br/>
@@ -44,7 +53,9 @@
     <br/>
 
 
-    <button (click)="showShared()">Shared with me</button>
+    <div class="text-center">
+        <button class="shareme" (click)="showShared()">Shared with me</button>
+    </div>
     <br/>
     <app-shared-list *ngIf="show" [list]="shared"></app-shared-list>
 </div>

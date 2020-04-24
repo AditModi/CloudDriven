@@ -1,16 +1,27 @@
-<hr style="border-top:2px solid #0055ff;" />
 <!-- <button *ngIf="level>1" class="button1 btn-info" style="width:120px;height:36px;font-size:15px;border-radius: 1rem;outline: none;margin-top:20px;margin-bottom:20px" (click)="revTraverse()">Back</button> -->
-<div *ngFor="let f of fileUploads">
-    
-    <div *ngFor="let file of f">
-        
-        <div
-            *ngIf="file.name.endsWith('/') && file.name.startsWith(parent) "
-            >
-           <button style="text-decoration: underline;cursor: pointer;" (click)="traverse(file)"> {{file.name}}</button>
-           <button (click)="remove(file)" >Remove</button>
-           <button (click)="download(file.name)" >Download</button>   
-    </div>
-        <app-details-upload [shared]="true" [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
+
+<div style="width: 95%;border: 1px solid black;height: 400px;margin-left: auto;margin-right: auto;overflow-y: scroll;margin-bottom: 20px;">
+    <div *ngFor="let f of fileUploads" style="display: inline-block;">
+
+        <div *ngFor="let file of f" style="vertical-align:top;display: inline-block;">
+
+            <div *ngIf="file.name.endsWith('/') && file.name.startsWith(parent) ">
+                <div class="dropdown">
+                    <button class="folder" (click)="traverse(file)">
+              <img style="width: 45px;height: 45px;" src="../../assets/pictures/folder.png"><br/> {{file.name}}</button>
+
+                    <div class="dropdown-content">
+                        <button (click)="remove(file)" style="width: 100%;">
+            <i class="fas fa-trash-alt"></i>&nbsp;&nbsp;
+            Delete
+      </button>
+
+                        <button (click)="download(file.name)" style="width: 100%;">
+            <i class="fas fa-download"></i> &nbsp; Download</button>
+                    </div>
+                </div>
+            </div>
+            <app-details-upload [shared]="true" [parent]="parent" [level]='level' [fileUpload]='file'></app-details-upload>
+        </div>
     </div>
 </div>
