@@ -14,7 +14,7 @@ import { FileUpload } from '../file-upload';
 export class SharedComponent implements OnInit {
 
   folders: Array<Shared> = []
-  user:string;
+  user:Array<String>=[];
   users:string=""
   newFolders: Array<FileUpload> = []
   list: Array<FileUpload> = []
@@ -96,8 +96,8 @@ export class SharedComponent implements OnInit {
     })
   }
 
-  addUser(folder){
-    folder.users.push(this.user)
+  addUser(folder,i){
+    folder.users.push(this.user[i])
     this.SharedServ.update(folder).subscribe(data=>console.log(data))
   }
 

@@ -1,7 +1,7 @@
 <div>
     <h2 style="padding-top: 3em;">My folders</h2>
     <hr style="border-top:2px solid #0055ff;" />
-    <div *ngFor="let f of folders" style="display: inline-block;">
+    <div *ngFor="let f of folders;index as i" style="display: inline-block;">
         <div class="text-center" *ngIf="f.folder.name.startsWith(uname)" style="display: inline-block;margin-left: 20px;">
             <img style="width: 45px;height: 45px;" src="../../assets/pictures/folder.png"><br/>
             <p style="font-weight: 500;"> {{f.folder.name}}</p> <button (click)="remove(f)">Disable sharing</button>
@@ -19,9 +19,9 @@
                 </ul>
             </div>
             <br/>
-            <input type="text" [(ngModel)]="user" placeholder="Username">
+            <input type="text" [(ngModel)]="user[i]" placeholder="Username">
             <br/>
-            <button (click)="addUser(f)">Add new user</button>
+            <button (click)="addUser(f,i)">Add new user</button>
 
         </div>
     </div>
