@@ -41,7 +41,7 @@ export class ChatbotComponent implements OnInit {
     }
     this.messages.push(new Message(this.userInput,"User"));
     this.userInput="";
-    this.messages.push(new Message(this.lexState,"Bot"));
+    this.messages.push(new Message(this.lexState,"Cloudy"));
     }
     );
     }
