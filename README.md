@@ -1,8 +1,6 @@
 # Cloud-Driven
 
-
 what is digital storage?
-
 
 
 Want to store data and access it from anywhere. how to do it ? 
